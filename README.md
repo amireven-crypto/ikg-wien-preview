@@ -1,8 +1,8 @@
-# IKG Wien – Konzept-Demo (SITE DROP)
+# IKG Wien – Konzept-Demo (PIXELPOP)
 
-Lokale, unveröffentlichte Neugestaltung von [ikg-wien.at](https://www.ikg-wien.at/) für das Portfolio von SITE DROP.
+Lokale, unveröffentlichte Neugestaltung von [ikg-wien.at](https://www.ikg-wien.at/) für das Portfolio von PIXELPOP.
 
-**Konzept-Demo von SITE DROP – keine offizielle Seite der IKG Wien.**
+**Konzept-Demo von PIXELPOP – keine offizielle Seite der IKG Wien.**
 
 Nicht pushen, nicht als offizielle Seite ausgeben. Alle Handlungen (Spenden, Mitgliedschaft, Kontakt, Anmeldungen) führen auf die echten IKG-Seiten.
 
