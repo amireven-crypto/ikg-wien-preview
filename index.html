@@ -8,11 +8,11 @@
 <meta content="Konzept-Demo einer Neugestaltung von ikg-wien.at. Keine offizielle Seite der IKG Wien. Inhalte stammen von der offiziellen Website." name="description"/>
 <meta content="noindex, nofollow" name="robots"/>
 <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
-<link href="css/styles.css?ver=1.5.0" rel="stylesheet"/>
-<link href="css/scroll-reveal.css?ver=1.5.0" rel="stylesheet"/>
-<link href="css/fade-in-up.css?ver=1.5.0" rel="stylesheet"/>
-<link href="css/stagger-list.css?ver=1.5.0" rel="stylesheet"/>
-<link href="css/card-lift-hover.css?ver=1.5.0" rel="stylesheet"/>
+<link href="css/styles.css?ver=1.7.0" rel="stylesheet"/>
+<link href="css/scroll-reveal.css?ver=1.7.0" rel="stylesheet"/>
+<link href="css/fade-in-up.css?ver=1.7.0" rel="stylesheet"/>
+<link href="css/stagger-list.css?ver=1.7.0" rel="stylesheet"/>
+<link href="css/card-lift-hover.css?ver=1.7.0" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
@@ -102,9 +102,10 @@
 </span>
 <a class="btn btn-primary" href="jetztspenden.html">Spenden</a>
 </nav>
+<div class="header-tools"><div aria-label="Schriftgröße" class="text-size" role="group"><button aria-label="Schrift verkleinern" class="text-size-btn" data-text-size="down" title="Schrift verkleinern" type="button">A−</button><button aria-label="Schrift vergrößern" class="text-size-btn" data-text-size="up" title="Schrift vergrößern" type="button">A+</button></div>
 <button aria-controls="mobile-nav" aria-expanded="false" aria-label="Menü öffnen" class="menu-toggle" type="button">
 <span></span>
-</button>
+</button></div>
 </div>
 <div class="wrap">
 <nav aria-label="Mobiles Menü" class="nav-mobile" hidden="" id="mobile-nav">
@@ -183,7 +184,7 @@
 <main id="inhalt">
 <section aria-labelledby="hero-title" class="hero"><div class="wrap"><div class="hero-frame"><div class="hero-media"><img alt="Innenraum des Wiener Stadttempels mit blauer Sternenkuppel, Säulen und Toraschrein. Historische Aufnahme vor der Restaurierung 2025/26." class="hero-img" height="1112" src="img/stadttempel-innen.jpg" width="1920"/><video autoplay="" class="hero-video" id="hero-video" loop="" muted="" playsinline="" poster="img/stadttempel-innen.jpg" preload="metadata">
 <source src="video/2026_09_16_headeralg-1280.mp4" type="video/mp4"/>
-</video><button aria-controls="hero-video" aria-label="Video pausieren" aria-pressed="true" class="hero-media-toggle" type="button">
+</video><div aria-hidden="true" class="hero-shade"></div><div class="hero-overlay"><h1 data-fade="" id="hero-title">Willkommen in der jüdischen Gemeinde Wiens</h1></div><button aria-controls="hero-video" aria-label="Video pausieren" aria-pressed="true" class="hero-media-toggle" type="button">
 <svg aria-hidden="true" class="icon-pause" focusable="false" height="18" viewbox="0 0 18 18" width="18">
 <rect fill="currentColor" height="12" rx="0.5" width="3.5" x="4" y="3"></rect>
 <rect fill="currentColor" height="12" rx="0.5" width="3.5" x="10.5" y="3"></rect>
@@ -192,13 +193,10 @@
 <path d="M5.5 3.2v11.6L14.8 9 5.5 3.2z" fill="currentColor"></path>
 </svg>
 </button></div></div><p class="hero-caption">Hintergrundvideo von der offiziellen Website der IKG Wien, ikg-wien.at. Als Standbild: Historische Aufnahme des Stadttempels, vor der Restaurierung und Sanierung 2025/26. Foto: Bic, <a class="u-color-inherit" href="https://creativecommons.org/licenses/by-sa/4.0" rel="noopener noreferrer" target="_blank" title="Öffnet in neuem Tab">CC BY-SA 4.0</a>, über Wikimedia Commons.</p><div class="hero-intro">
-
-<h1 data-fade="" id="hero-title">Willkommen in der jüdischen Gemeinde Wiens</h1>
 <p class="lead" data-fade="">Die kleine Wiener jüdische Gemeinde zählt heute zu den lebendigsten im deutschsprachigen Raum. Die Israelitische Kultusgemeinde (IKG) Wien hat knapp 8.000 Mitglieder, insgesamt leben etwa 12.000 Jüdinnen und Juden in Wien.</p>
 <div class="hero-actions" data-fade="">
 <a class="btn btn-primary" href="#aktuelles">Aktuelles</a>
 <a class="btn btn-ghost" href="#stadttempel">200 Jahre Stadttempel</a>
-
 </div>
 </div></div></section>
 <div class="wrap">
@@ -224,59 +222,57 @@
 <section aria-labelledby="aktuelles-title" id="aktuelles">
 <div class="wrap">
 <div class="section-head" data-reveal="">
-
 <h2 id="aktuelles-title">Aktuelles aus der Gemeinde</h2>
-
 </div>
 <div class="news-grid">
-<a class="news-card memorial" data-reveal="" href="nachrichten/light-of-hope-2026-wir-sind-hier-wir-bleiben-hier-und-wir-gestalten-unsere-zukunft.html">
+<a class="news-card memorial" data-reveal="" href="nachrichten/light-of-hope-2026-wir-sind-hier-wir-bleiben-hier-und-wir-gestalten-unsere-zukunft.html"><img alt="26 11 09 light of hoper, ikg winter 14" class="news-card-img" height="500" src="img/official/26-11-09-light-of-hoper-ikg_winter_14-78e0a99eb2e42c7a.jpg" width="800"/><div class="news-card-body">
 <p class="news-meta">Gedenken · 9. November</p>
 <h3>Light of Hope 2026: Wir sind hier. Wir bleiben hier. Und wir gestalten unsere Zukunft.</h3>
 <p>Am 9. November lud die IKG-Jugendabteilung zum diesjährigen Light of Hope ein. Im Gedenken an die Novemberpogrome von 1938 stand der Abend ganz im Zeichen der Vergangenheit, der Gegenwart und der Zukunft des jüdischen Lebens in Wien.</p>
 <span class="more">Weiterlesen</span>
-</a>
-<a class="news-card memorial" data-reveal="" data-reveal-delay="80" href="nachrichten/gedenken-an-die-novemberpogrome-1938.html">
+</div></a>
+<a class="news-card memorial" data-reveal="" data-reveal-delay="80" href="nachrichten/gedenken-an-die-novemberpogrome-1938.html"><img alt="Aufstellung Namensmauer" class="news-card-img" height="500" src="img/official/_sro7973-bd7c9ea4c3f0b5af.jpg" width="800"/><div class="news-card-body">
 <p class="news-meta">Gedenken · 9. November 2026</p>
 <h3>Gedenken an die Novemberpogrome 1938</h3>
 <p>Am Montag, dem 9. November 2026, versammelten sich hochrangige Vertreterinnen und Vertreter aus Politik, Diplomatie und der jüdischen Gemeinde an der Schoa-Namensmauer-Gedenkstätte im Wiener Ostarrichipark.</p>
 <span class="more">Weiterlesen</span>
-</a>
-<a class="news-card lift-card" data-reveal="" href="chanukka-hilfe.html">
+</div></a>
+<a class="news-card lift-card" data-reveal="" href="chanukka-hilfe.html"><img alt="Zwei Kerzen: Eine Kerze entzündet die andere, darunter acht kleine Lichter." class="news-card-img" height="500" src="img/official/sujet_kopfbild_animiert_mobil_desktop-9a6dcb0679613020.svg" width="800"/><div class="news-card-body">
 <p class="news-meta">News · 03.11.2026</p>
 <h3>Chanukka-Hilfe 2026: Ein Licht entzündet das nächste</h3>
 <p>200 Euro Lebensmittelgutschein pro Person für Gemeindemitglieder in Not – jetzt spenden oder bis 16.11. beantragen.</p>
 <span class="more">Weiterlesen</span>
-</a>
-<a class="news-card lift-card" data-reveal="" data-reveal-delay="80" href="nachrichten/likratinos-und-likratinas-beim-internationalen-leadership-seminar-first-step-2026-in-budapest.html">
+</div></a>
+<a class="news-card lift-card" data-reveal="" data-reveal-delay="80" href="nachrichten/likratinos-und-likratinas-beim-internationalen-leadership-seminar-first-step-2026-in-budapest.html"><img alt="Gruppenbild 1 kopie" class="news-card-img" height="500" src="img/official/gruppenbild-1-kopie-6fb28c1d6dbf5097.jpg" width="800"/><div class="news-card-body">
 <p class="news-meta">Likrat</p>
 <h3>Likratinos und Likratinas beim internationalen Leadership-Seminar „First Step 2026“ in Budapest</h3>
 <p>Likratinos und Likratinas nahmen von 22. bis 25. Oktober am internationalen Leadership-Seminar „First Step“ in Budapest teil.</p>
 <span class="more">Weiterlesen</span>
-</a>
-<a class="news-card lift-card" data-reveal="" href="nachrichten/wenn-aus-einem-spiel-eine-begegnung-wird-likrat-bei-polizei-spielt-mit.html">
+</div></a>
+<a class="news-card lift-card" data-reveal="" href="nachrichten/wenn-aus-einem-spiel-eine-begegnung-wird-likrat-bei-polizei-spielt-mit.html"><img alt="4 w0 a7215" class="news-card-img" height="500" src="img/official/4w0a7215-a5c20c52b661e341.jpg" width="800"/><div class="news-card-body">
 <p class="news-meta">Likrat</p>
 <h3>Wenn aus einem Spiel eine Begegnung wird: Likrat bei „Polizei spielt mit“</h3>
 <p>Was passiert, wenn Likratinas und Likratinos auf Grätzlpolizist*innen treffen? Die Antwort: spannende Spiele, offene Fragen und Begegnungen auf Augenhöhe.</p>
 <span class="more">Weiterlesen</span>
-</a>
-<a class="news-card lift-card" data-reveal="" data-reveal-delay="80" href="nachrichten/mirna-funk-begeistert-mit-ihrem-neuen-roman-balagan.html">
+</div></a>
+<a class="news-card lift-card" data-reveal="" data-reveal-delay="80" href="nachrichten/mirna-funk-begeistert-mit-ihrem-neuen-roman-balagan.html"><img alt="Img 9505" class="news-card-img" height="500" src="img/official/img_9505-8ba46e26b9c6d01a.jpeg" width="800"/><div class="news-card-body">
 <p class="news-meta">News · 23.10.2026</p>
 <h3>Mirna Funk begeistert mit ihrem neuen Roman „Balagan“</h3>
 <p>Ein gelungener und inspirierender Buchabend im ZiB: Die Bestsellerautorin Mirna Funk stellte am 22. Oktober in Baden ihren aktuellen Roman „Balagan“ vor.</p>
 <span class="more">Weiterlesen</span>
-</a>
-<a class="news-card lift-card" data-reveal="" href="nachrichten/schuluebergreifende-fortbildung-fuer-mitarbeiter-juedischer-schulen.html">
+</div></a>
+<a class="news-card lift-card" data-reveal="" href="nachrichten/schuluebergreifende-fortbildung-fuer-mitarbeiter-juedischer-schulen.html"><img alt="Bildschirmfoto 2026 10 20 um 10.56.29" class="news-card-img" height="500" src="img/official/bildschirmfoto-2026-10-20-um-10-56-29-5e226ca434a1c70a.jpg" width="800"/><div class="news-card-body">
 <p class="news-meta">News · 20.10.2026</p>
 <h3>Schulübergreifende Fortbildung für Mitarbeiter jüdischer Schulen</h3>
 <p>Die Bildungskommission organisierte auch heuer wieder eine schulübergreifende LehrerInnenfortbildung.</p>
 <span class="more">Weiterlesen</span>
-</a>
-<a class="news-card lift-card" data-reveal="" data-reveal-delay="80" href="nachrichten/likrat-2027-ein-neuer-jahrgang-eine-gemeinsame-mission.html">
+</div></a>
+<a class="news-card lift-card" data-reveal="" data-reveal-delay="80" href="nachrichten/likrat-2027-ein-neuer-jahrgang-eine-gemeinsame-mission.html"><img alt="Ds c09285" class="news-card-img" height="500" src="img/official/dsc09285-9b5e21a4816a5bd2.jpg" width="800"/><div class="news-card-body">
 <p class="news-meta">News · 19.10.2026</p>
 <h3>Likrat 2027: Ein neuer Jahrgang, eine gemeinsame Mission</h3>
 <p>Mit viel Neugier, Offenheit und guter Stimmung ist der neue Likrat-Lehrgang gestartet. Beim ersten Seminar stand vor allem das gegenseitige Kennenlernen im Mittelpunkt.</p>
 <span class="more">Weiterlesen</span>
-</a>
+</div></a>
 </div>
 <p class="u-mt-28" data-reveal="">
 <a class="btn btn-light" href="aktuelle.html">Alle Nachrichten auf ikg-wien.at</a>
@@ -320,7 +316,6 @@
 <p class="cap">Historische Aufnahme, vor der Restaurierung und Sanierung 2025/26. Foto: Dnalor 01, <a class="u-color-inherit" href="https://creativecommons.org/licenses/by-sa/3.0/at/deed.de" rel="noopener noreferrer" target="_blank" title="Öffnet in neuem Tab">CC BY-SA 3.0 AT</a>, über Wikimedia Commons.</p>
 </div>
 <div class="split-copy" data-reveal="" data-reveal-delay="80">
-
 <h2 id="stadttempel-title">Die Restaurierung und Sanierung des Stadttempels</h2>
 <p class="lede">Im Jahr 2026 feiert der von Josef Kornhäusl errichtete Stadttempel sein 200-jähriges Bestehen. Die Restaurierung und Sanierung des Wiener Stadttempels hat zum Ziel, dieses spirituelle und kulturhistorische Zentrum des österreichischen Judentums zu erhalten und bereit für die Zukunft zu machen.</p>
 <blockquote class="quote">
@@ -360,7 +355,6 @@
 <p class="cap">Seitenstettengasse, Sitz der IKG Wien und des Stadttempels. Foto: Yair Haklai, 2010, <a href="https://creativecommons.org/licenses/by-sa/3.0" rel="noopener noreferrer" target="_blank" title="Öffnet in neuem Tab">CC BY-SA 3.0</a>, über Wikimedia Commons.</p>
 </div>
 <div class="split-copy" data-reveal="" data-reveal-delay="80">
-
 <h2 id="likrat-title">Likrat</h2>
 <p class="lede">Jüdische Jugendliche besuchen Schulen, um Fragen zu beantworten und möglichen Vorurteilen entgegenzuwirken.</p>
 <p>Jüdische Jugendliche im Alter von 14 bis 18 Jahren werden im Rahmen von Workshops und Seminaren professionell ausgebildet. Die auszubildenden Jugendlichen erlernen Skills in den Bereichen Religion, Israel, jüdische Geschichte, Shoah, Rhetorik, Kommunikation und Gruppendynamik. Nach Abschluss dieser Ausbildung besuchen die jüdischen Jugendlichen Schulen, um mit gleichaltrigen nichtjüdischen Schülerinnen und Schülern einen offenen Dialog über das Judentum zu führen, kritische Fragen zu beantworten und möglichen Vorurteilen entgegenzuwirken.</p>
@@ -376,7 +370,6 @@
 <section aria-labelledby="service-title" class="section-mute" id="service">
 <div class="wrap">
 <div class="section-head" data-reveal="">
-
 <h2 id="service-title">Service und Einrichtungen</h2>
 <p>Die IKG Wien ist die Einheitsgemeinde aller Strömungen des Judentums, die in Wien vertreten sind. Sie bewahrt das jüdische Erbe und ist Gestalterin der jüdischen Zukunft in Österreich.</p>
 </div>
@@ -424,13 +417,12 @@
 <section aria-labelledby="events-title" id="veranstaltungen">
 <div class="wrap">
 <div class="section-head" data-reveal="">
-
 <h2 id="events-title">Kommende Veranstaltungen</h2>
 <p>Termine laut der offiziellen Eventseiten der IKG Wien. Anmeldung und aktuelle Hinweise finden Sie dort.</p>
 </div>
 <div class="event-list">
 <article class="event-row" data-reveal="">
-<div class="event-date">11.11.2026, 19:00</div>
+<div class="event-date"><span class="event-day">11</span><span class="event-month">Nov.</span><span class="event-time">19:00</span></div>
 <div>
 <p class="event-cats"><a href="events/events-kultur.html">Kultur</a></p>
 <h3><a href="event/proud26.html">Film-Österreichpremiere: Proud Jewish Boy / Na'ar Jehudi Ge'eh</a></h3>
@@ -439,7 +431,7 @@
 <a class="more" href="event/proud26.html">Details</a>
 </article>
 <article class="event-row" data-reveal="">
-<div class="event-date">12.11.2026, 17:00</div>
+<div class="event-date"><span class="event-day">12</span><span class="event-month">Nov.</span><span class="event-time">17:00</span></div>
 <div>
 <p class="event-cats"><a href="events/ikg-events.html">IKG Events</a> · <a href="events/upcoming.html">Upcoming</a></p>
 <h3><a href="event/frauenvernetzungsveranstaltung-der-frauenkommission.html">Frauenvernetzungsveranstaltung der Frauenkommission</a></h3>
@@ -448,7 +440,7 @@
 <a class="more" href="event/frauenvernetzungsveranstaltung-der-frauenkommission.html">Details</a>
 </article>
 <article class="event-row" data-reveal="">
-<div class="event-date">19.11.2026, 19:30</div>
+<div class="event-date"><span class="event-day">19</span><span class="event-month">Nov.</span><span class="event-time">19:30</span></div>
 <div>
 <p class="event-cats"><a href="events/baden-event.html">baden</a> · <a href="events/events-kultur.html">Kultur</a></p>
 <h3><a href="event/in-mir-klingt-ein-lied-eine-musikalische-lesung-ueber-alma-rose.html">„In mir klingt ein Lied“ – Eine musikalische Lesung über Alma Rosé</a></h3>
@@ -457,7 +449,7 @@
 <a class="more" href="event/in-mir-klingt-ein-lied-eine-musikalische-lesung-ueber-alma-rose.html">Details</a>
 </article>
 <article class="event-row" data-reveal="">
-<div class="event-date">25.11.2026, 19:30</div>
+<div class="event-date"><span class="event-day">25</span><span class="event-month">Nov.</span><span class="event-time">19:30</span></div>
 <div>
 <p class="event-cats"><a href="events/events-kultur.html">Kultur</a></p>
 <h3><a href="event/kantor26.html">Das Kantorenkonzert 2026 im neu restaurierten Wiener Stadttempel</a></h3>
@@ -474,7 +466,6 @@
 <section aria-labelledby="kontakt-title" class="section-mute" id="kontakt">
 <div class="wrap">
 <div class="section-head" data-reveal="">
-
 <h2 id="kontakt-title">Kontakt</h2>
 </div>
 <div class="contact-grid">
@@ -488,8 +479,8 @@
 <address>
                 Seitenstettengasse 4<br/>
                 1010 Wien<br/>
-                Tel. +43 1 531 04-0<br/>
-                Fax +43 1 531 04-109<br/>
+                Tel. <a href="tel:+431531040">+43 1 531 04-0</a><br/>
+                Fax <a href="tel:+43153104109">+43 1 531 04-109</a><br/>
                 office@ikg-wien.at
               </address>
 <div class="actions">
@@ -509,15 +500,15 @@
 <p>Wir ersuchen um vorherige Terminvereinbarung.<br/>
               Montag bis Donnerstag: 9.00 bis 16.30 Uhr<br/>
               Freitag: 9.00 bis 13.00 Uhr<br/>
-              Tel.: +43 1 53104 171, service@ikg-wien.at</p>
+              Tel.: <a href="tel:+43153104171">+43 1 53104 171</a>, service@ikg-wien.at</p>
 </div>
 <dl>
-<div class="dept"><dt>Präsidium &amp; Generalsekretariat</dt><dd>+43 1 53104 104</dd></div>
-<div class="dept"><dt>Rabbinat</dt><dd>+43 1 53104 111</dd></div>
-<div class="dept"><dt>Jugendabteilung</dt><dd>+43 1 53104 168</dd></div>
-<div class="dept"><dt>Kulturabteilung</dt><dd>+43 1 53104 203</dd></div>
-<div class="dept"><dt>Guided Tours</dt><dd>+43 1 53104 169</dd></div>
-<div class="dept"><dt>Bestattung &amp; Friedhofsverwaltung</dt><dd>+43 1 53104 6600<br/><span>(24 Std., nur für Todesfälle)</span></dd></div>
+<div class="dept"><dt>Präsidium &amp; Generalsekretariat</dt><dd><a href="tel:+43153104104">+43 1 53104 104</a></dd></div>
+<div class="dept"><dt>Rabbinat</dt><dd><a href="tel:+43153104111">+43 1 53104 111</a></dd></div>
+<div class="dept"><dt>Jugendabteilung</dt><dd><a href="tel:+43153104168">+43 1 53104 168</a></dd></div>
+<div class="dept"><dt>Kulturabteilung</dt><dd><a href="tel:+43153104203">+43 1 53104 203</a></dd></div>
+<div class="dept"><dt>Guided Tours</dt><dd><a href="tel:+43153104169">+43 1 53104 169</a></dd></div>
+<div class="dept"><dt>Bestattung &amp; Friedhofsverwaltung</dt><dd><a href="tel:+431531046600">+43 1 53104 6600</a><br/><span>(24 Std., nur für Todesfälle)</span></dd></div>
 </dl>
 </div>
 </div>
@@ -526,7 +517,6 @@
 <section aria-labelledby="spenden-title" id="spenden">
 <div class="wrap">
 <div class="section-head" data-reveal="">
-
 <h2 id="spenden-title">Jüdisches Leben braucht Freunde und Unterstützer</h2>
 <p>Viele Leistungen der Israelitischen Kultusgemeinde sind nur durch Spenden möglich. Dazu zählen Zuwendungen von Privatpersonen ebenso wie von Unternehmen und Stiftungen. Geben ist im Judentum tief verwurzelt. Zedaka (Gerechtigkeit) ist der jüdische Ansatz gegen Armut.</p>
 </div>
@@ -577,7 +567,6 @@
 </div>
 <div class="footer-newsletter">
 <h2>Newsletter</h2>
-
 <p>
 <a class="btn btn-on-primary" href="newsletter.html">Anmeldung</a>
 </p>
@@ -688,9 +677,9 @@
       </p>
 </div>
 </footer>
-<script src="js/scroll-reveal.js?ver=1.5.0"></script>
-<script src="js/fade-in-up.js?ver=1.5.0"></script>
-<script src="js/stagger-list.js?ver=1.5.0"></script>
-<script src="js/site.js?ver=1.5.0"></script>
+<script src="js/scroll-reveal.js?ver=1.7.0"></script>
+<script src="js/fade-in-up.js?ver=1.7.0"></script>
+<script src="js/stagger-list.js?ver=1.7.0"></script>
+<script src="js/site.js?ver=1.7.0"></script>
 </body>
 </html>

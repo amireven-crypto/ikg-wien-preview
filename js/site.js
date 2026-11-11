@@ -7,6 +7,7 @@
 
   function setOpen(open) {
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
     panel.classList.toggle('is-open', open);
     panel.hidden = !open;
     document.body.classList.toggle('menu-open', open);
@@ -190,4 +191,93 @@
       if (n) n.textContent = "Demo – keine Daten werden gesendet";
     });
   });
+})();
+
+
+/* Highlight the current page in the header nav. Classes only (strict CSP). */
+(function () {
+  'use strict';
+  var path = (window.location.pathname || '').replace(/\\/g, '/');
+  var parts = path.split('/');
+  var file = parts[parts.length - 1] || 'index.html';
+  if (!file || file === 'ikg-wien-preview') file = 'index.html';
+
+  var links = document.querySelectorAll('.nav-desktop a[href], .nav-mobile a[href]');
+  links.forEach(function (a) {
+    if (a.classList.contains('btn') || a.classList.contains('wordmark') || a.closest('.lang-switch')) return;
+    var href = (a.getAttribute('href') || '').split('#')[0].split('?')[0];
+    if (!href || href.indexOf('mailto:') === 0 || href.indexOf('http') === 0) return;
+    var name = href.split('/');
+    name = name[name.length - 1];
+    if (name && name === file) {
+      a.classList.add('is-active');
+      a.setAttribute('aria-current', 'page');
+      var group = a.closest('.nav-group, .nav-accordion');
+      if (group) {
+        var btn = group.querySelector('.nav-group-toggle, .nav-acc-toggle');
+        if (btn) btn.classList.add('is-active');
+      }
+    }
+  });
+})();
+
+
+/* Text size control. Classes only (strict CSP). Optional local preference. */
+(function () {
+  'use strict';
+  var KEY = 'ikg-demo-text-size';
+  var levels = ['md', 'lg', 'xl'];
+
+  function current() {
+    var html = document.documentElement;
+    var i, level = 'md';
+    for (i = 0; i < levels.length; i++) {
+      if (html.classList.contains('text-size-' + levels[i])) level = levels[i];
+    }
+    return level;
+  }
+
+  function apply(level) {
+    if (levels.indexOf(level) === -1) level = 'md';
+    var html = document.documentElement;
+    var i;
+    for (i = 0; i < levels.length; i++) {
+      html.classList.remove('text-size-' + levels[i]);
+    }
+    if (level !== 'md') html.classList.add('text-size-' + level);
+    try { localStorage.setItem(KEY, level); } catch (e) {}
+    document.querySelectorAll('.text-size-btn').forEach(function (btn) {
+      var dir = btn.getAttribute('data-text-size');
+      btn.disabled = (dir === 'down' && level === 'md') || (dir === 'up' && level === 'xl');
+    });
+  }
+
+  var start = 'md';
+  try { start = localStorage.getItem(KEY) || 'md'; } catch (e) {}
+  apply(start);
+
+  document.addEventListener('click', function (e) {
+    var btn = e.target.closest && e.target.closest('.text-size-btn');
+    if (!btn) return;
+    var i = levels.indexOf(current());
+    if (i < 0) i = 0;
+    if (btn.getAttribute('data-text-size') === 'up' && i < levels.length - 1) i += 1;
+    if (btn.getAttribute('data-text-size') === 'down' && i > 0) i -= 1;
+    apply(levels[i]);
+  });
+
+  var lang = (document.documentElement.getAttribute('lang') || '').toLowerCase();
+  if (lang.indexOf('en') === 0) {
+    var group = document.querySelector('.text-size');
+    if (group) group.setAttribute('aria-label', 'Text size');
+    document.querySelectorAll('.text-size-btn').forEach(function (btn) {
+      if (btn.getAttribute('data-text-size') === 'down') {
+        btn.setAttribute('aria-label', 'Decrease text size');
+        btn.setAttribute('title', 'Decrease text size');
+      } else {
+        btn.setAttribute('aria-label', 'Increase text size');
+        btn.setAttribute('title', 'Increase text size');
+      }
+    });
+  }
 })();
