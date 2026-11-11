@@ -35,7 +35,7 @@
   /* Official IKG Wien logo colours and site-derived navy / soft blue */
   --color-primary: #303992;
   --color-primary-hover: #252C75;
-  --color-accent: #FF311B;
+  --color-accent: #D21F26;
   --color-accent-text: #C41F12; /* darker red for small text on light grounds (WCAG AA) */
   --color-navy: #101022;
   --color-soft-blue: #8388BE;
@@ -724,7 +724,7 @@ p.eyebrow::after,
 
 /* Wordmark in IKG logo colours */
 .wordmark-name .wm-ikg { color: #303992; }
-.wordmark-name .wm-wien { color: #FF311B; }
+.wordmark-name .wm-wien { color: #D21F26; }
 
 /* Official mega-menu, erleben, newsletter, footer sitemap */
 
@@ -2145,7 +2145,7 @@ html.text-size-xl { font-size: 20px; }
    - Airbnb (DESIGN.md): image-tile grids, generous whitespace, no card shadows,
      hairline greys, 14px photo radii (we use 8–12px to stay tidier).
    IKG colours only: primary #303992 (in place of IKEA/Uber blues/black for CTAs),
-   accent #FF311B used sparingly. No IKEA yellow, logo, or branding. */
+   accent #D21F26 used sparingly. No IKEA yellow, logo, or branding. */
 @font-face {
   font-family: "Noto Sans";
   src: url("../fonts/noto-sans-wght.woff2") format("woff2");
@@ -2166,7 +2166,7 @@ html.text-size-xl { font-size: 20px; }
   --font-text: "Noto Sans", Verdana, "Helvetica Neue", Arial, sans-serif;
   --color-primary: #303992;
   --color-primary-hover: #252C75;
-  --color-accent: #FF311B;
+  --color-accent: #D21F26;
   --color-navy: #111111;
   --color-secondary: #F5F5F5;
   --color-surface: #FFFFFF;
