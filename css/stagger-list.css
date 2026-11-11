@@ -1,0 +1,6 @@
+/* stagger-list — no staggered delays; same short fade as other recipes. */
+[data-stagger] > * { opacity: 1; }
+[data-stagger].is-in > * { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  [data-stagger] > * { opacity: 1; transition: none; }
+}

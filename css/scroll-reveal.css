@@ -1,0 +1,9 @@
+/* scroll-reveal — short fade only. */
+[data-reveal] {
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+[data-reveal].is-in { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal] { opacity: 1; transition: none; }
+}

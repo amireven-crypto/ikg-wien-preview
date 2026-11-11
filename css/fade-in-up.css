@@ -1,0 +1,9 @@
+/* fade-in-up.js companion — short fade only, no lift. */
+[data-fade] {
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+[data-fade].is-in { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  [data-fade] { opacity: 1; transition: none; }
+}

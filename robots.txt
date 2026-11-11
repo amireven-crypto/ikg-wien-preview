@@ -1,0 +1,3 @@
+# Konzept-Demo von SITE DROP – keine offizielle Seite, nicht indexieren.
+User-agent: *
+Disallow: /

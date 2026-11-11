@@ -1,0 +1,8 @@
+/* card-lift-hover — disabled for a formal, static institutional look. */
+.lift-card,
+.lift-card:hover,
+.lift-card:active {
+  transform: none;
+  box-shadow: none;
+  transition: none;
+}
