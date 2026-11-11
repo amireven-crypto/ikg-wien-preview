@@ -2136,3 +2136,395 @@ html.text-size-xl { font-size: 20px; }
     font-size: 1.5rem; /* 24px */
   }
 }
+
+
+/* IKEA-inspired restyle
+   motion-anything has no IKEA system. Closest bundled systems used here:
+   - Uber (DESIGN.md): geometric sans, flat solid surfaces, 999px pill buttons,
+     no gradients, 8–12px card radii.
+   - Airbnb (DESIGN.md): image-tile grids, generous whitespace, no card shadows,
+     hairline greys, 14px photo radii (we use 8–12px to stay tidier).
+   IKG colours only: primary #303992 (in place of IKEA/Uber blues/black for CTAs),
+   accent #FF311B used sparingly. No IKEA yellow, logo, or branding. */
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/noto-sans-wght.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Noto Sans";
+  src: url("../fonts/noto-sans-italic.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  --font-display: "Noto Sans", Verdana, "Helvetica Neue", Arial, sans-serif;
+  --font-text: "Noto Sans", Verdana, "Helvetica Neue", Arial, sans-serif;
+  --color-primary: #303992;
+  --color-primary-hover: #252C75;
+  --color-accent: #FF311B;
+  --color-navy: #111111;
+  --color-secondary: #F5F5F5;
+  --color-surface: #FFFFFF;
+  --color-text: #111111;
+  --color-muted: #5F5F5F;
+  --color-rule: #E5E5E5;
+  --radius: 999px;
+  --radius-card: 8px;
+  --header-h: 64px;
+  --wrap: 1200px;
+  --gutter: 32px;
+}
+
+html { font-size: 16px; }
+body {
+  font-family: var(--font-text);
+  font-size: 1.0625rem; /* 17px */
+  line-height: 1.6;
+  color: var(--color-text);
+  background: #fff;
+  font-weight: 400;
+}
+@media (max-width: 800px) {
+  body { font-size: 1.125rem; } /* 18px */
+}
+html.text-size-lg { font-size: 18px; }
+html.text-size-xl { font-size: 20px; }
+
+h1, h2, h3, h4, h5,
+.wordmark-name,
+.hero-overlay h1,
+.hero-intro h1,
+.section-head h2,
+.news-card h3,
+.event-row h3,
+.page-content h1,
+.page-content h2,
+.page-content h3,
+.erleben-tile h3,
+.service-card h3,
+.site-footer h2,
+.nav-acc-toggle {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: var(--color-text);
+}
+
+/* Header: flat white, icon+label utilities, slim */
+.site-header {
+  background: #fff;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-bottom: 1px solid var(--color-rule);
+  box-shadow: none;
+}
+.header-inner {
+  min-height: 64px;
+  gap: 12px 20px;
+  flex-wrap: nowrap;
+}
+.wordmark-kicker {
+  font-family: var(--font-text);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--color-primary);
+}
+.wordmark-name {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+}
+.nav-desktop {
+  flex-wrap: nowrap;
+  gap: 4px 18px;
+}
+.nav-group-toggle,
+.nav-desktop > a:not(.btn) {
+  font-family: var(--font-text);
+  font-size: 14px;
+  font-weight: 600;
+  min-height: 44px;
+  color: var(--color-text);
+  box-shadow: none;
+}
+.nav-group-toggle.is-active,
+.nav-desktop > a:not(.btn):not(.nav-tool).is-active {
+  color: var(--color-primary);
+  box-shadow: inset 0 -2px 0 var(--color-primary);
+}
+.nav-dropdown {
+  border-radius: 8px;
+  border: 1px solid var(--color-rule);
+  box-shadow: none;
+  padding: 8px;
+}
+.nav-dropdown a {
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+/* Icon + label for Search / Newsletter (IKEA-like utility nav) */
+.nav-tools .nav-tool {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+.nav-tools .nav-tool::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background: currentColor;
+  flex-shrink: 0;
+  -webkit-mask: url("../img/icons/search.svg") center / contain no-repeat;
+  mask: url("../img/icons/search.svg") center / contain no-repeat;
+}
+.nav-tools .nav-tool[href*="newsletter"]::before {
+  -webkit-mask-image: url("../img/icons/mail.svg");
+  mask-image: url("../img/icons/mail.svg");
+}
+
+/* Pill buttons — allowed in this pass (IKEA / Uber pattern) */
+.btn,
+.btn-primary,
+.btn-ghost,
+.btn-light,
+.btn-on-primary,
+.nav-desktop a.btn,
+.nav-mobile a.btn,
+.nav-desktop .btn-primary,
+.hero-actions .btn {
+  border-radius: 999px;
+  box-shadow: none;
+  font-family: var(--font-text);
+  font-weight: 700;
+  min-height: 44px;
+  padding: 0 20px;
+  letter-spacing: 0;
+}
+.btn-primary,
+.nav-desktop a.btn-primary,
+.btn-on-primary,
+.nav-mobile .btn-primary {
+  background: var(--color-primary);
+  color: #fff;
+  border: 2px solid var(--color-primary);
+}
+.btn-primary:hover,
+.btn-on-primary:hover {
+  background: var(--color-primary-hover);
+  border-color: var(--color-primary-hover);
+  color: #fff;
+}
+.btn-ghost,
+.btn-light,
+.hero .btn-ghost,
+.hero .btn-light {
+  background: #fff;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+}
+.btn-ghost:hover,
+.btn-light:hover,
+.hero .btn-ghost:hover,
+.hero .btn-light:hover {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.text-size { border-radius: 999px; }
+.text-size-btn { border-radius: 0; min-width: 44px; min-height: 44px; }
+.menu-toggle { width: 44px; height: 44px; min-width: 44px; min-height: 44px; }
+
+/* Hero: large flat media, bold geometric title, pill CTAs */
+.hero { padding: 28px 0 0; background: #fff; }
+.hero-media {
+  aspect-ratio: 16 / 6.5;
+  max-height: 560px;
+  border: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.hero-shade { background: rgba(17, 17, 17, 0.4); }
+.hero-overlay h1,
+.hero-intro h1,
+.page-content h1,
+.page-breadcrumb + h1 {
+  font-size: clamp(1.875rem, 3.4vw, 2.75rem); /* 30–44px, large but not oversized */
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.1;
+}
+.hero-overlay h1 { color: #fff; }
+.hero .lead,
+.hero-intro .lead { font-size: 1.125rem; }
+.hero-media-toggle {
+  border-radius: 999px;
+  width: 44px;
+  height: 44px;
+  min-height: 44px;
+  border: 0;
+  background: #fff;
+  color: var(--color-text);
+}
+@media (max-width: 800px) {
+  .hero { padding: 16px 0 0; }
+  .hero-media { aspect-ratio: 16 / 10; max-height: 340px; }
+  .hero-overlay { padding: 20px; }
+  .hero-overlay h1,
+  .page-content h1 { font-size: 1.875rem; }
+}
+
+/* Generous sections, light grey panels */
+section { padding: 72px 0; }
+.section-mute,
+.newsletter-banner { background: #F5F5F5; border: 0; }
+.section-head { margin-bottom: 36px; }
+.section-head h2 {
+  font-size: clamp(1.5rem, 2.4vw, 2rem);
+  font-weight: 800;
+  color: var(--color-text);
+}
+
+/* Big flat image tiles (Airbnb listing-card idea, flatter) */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 32px 24px;
+}
+.news-card {
+  grid-column: span 4;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  box-shadow: none;
+  overflow: hidden;
+}
+.news-card.memorial {
+  border-left: 0;
+  background: transparent;
+}
+.news-card:hover {
+  border-color: transparent;
+  box-shadow: none;
+}
+.news-card-img,
+.news-card > img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #F5F5F5;
+}
+.news-card-body { padding: 14px 2px 0; }
+.news-card h3 { font-size: 1.25rem; font-weight: 700; margin: 0 0 6px; }
+.news-meta { font-size: 0.875rem; font-weight: 600; }
+@media (max-width: 960px) { .news-card { grid-column: span 6; } }
+@media (max-width: 640px) { .news-card { grid-column: span 12; } section { padding: 48px 0; } }
+
+.erleben-tile,
+.service-card,
+.lift-card,
+.donate-box,
+.embed-placeholder {
+  border: 0;
+  border-radius: 8px;
+  box-shadow: none;
+  background: #F5F5F5;
+}
+.erleben-tile:hover,
+.service-card:hover,
+.lift-card:hover {
+  border-color: transparent;
+  box-shadow: none;
+  outline: 2px solid var(--color-primary);
+  outline-offset: 0;
+}
+
+.stats { border: 0; padding: 28px 0 0; gap: 20px 24px; }
+.stat dt { font-family: var(--font-display); font-weight: 800; font-size: 1.5rem; color: var(--color-primary); }
+
+/* Events: tidy rows, flat date tiles */
+.event-list { border-top: 1px solid var(--color-rule); }
+.event-row { gap: 20px; padding: 18px 0; }
+.event-date {
+  background: #F5F5F5;
+  border: 0;
+  border-radius: 8px;
+}
+.event-day { font-weight: 800; }
+
+/* Subpages */
+.page-main { padding: 40px 0 80px; }
+.page-extracted .relative:has(> figure.official-fig):has(h1) > figure.official-fig img {
+  border-radius: 8px;
+  max-height: 320px;
+  border: 0;
+}
+
+/* Footer: flat dark, IKEA-like link columns, IKG navy-black */
+.site-footer {
+  background: #111111;
+  color: #F5F5F5;
+  border-top: 0;
+  padding: 48px 0 32px;
+  font-size: 0.95rem;
+}
+.site-footer h2 { color: #fff; font-weight: 800; letter-spacing: 0; text-transform: none; }
+.site-footer a { color: #F5F5F5; }
+.footer-top p { color: #D0D0D0; }
+.newsletter-banner h2 { color: var(--color-text); }
+.newsletter-banner .btn-on-primary { border-radius: 999px; }
+
+/* Mobile: keep senior-friendly, balanced, full-screen menu */
+@media (max-width: 1199px) {
+  body.menu-open { overflow: hidden; }
+  body.menu-open > main,
+  body.menu-open .site-footer { display: none !important; }
+  body.menu-open .site-header { position: relative; background: #fff; z-index: 70; }
+  body.menu-open .site-header > .wrap:has(.nav-mobile) {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0 16px 24px;
+  }
+  .nav-mobile.is-open {
+    display: block;
+    min-height: calc(100dvh - 8rem);
+    padding: 8px 0 32px;
+    border-top: 1px solid var(--color-rule);
+    background: #fff;
+    overflow: auto;
+  }
+  .nav-acc-toggle,
+  .nav-mobile a,
+  .mobile-langs a,
+  .nav-acc-panel a {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    font-family: var(--font-text);
+    font-size: 1.125rem;
+    font-weight: 600;
+  }
+  .nav-mobile .btn { border-radius: 999px; width: 100%; min-height: 44px; }
+  .page-content, .page-main, .wrap, .hero-media, .news-card, .table-scroll { max-width: 100%; }
+  .table-scroll { overflow-x: auto; }
+  a[href^="tel:"], a[href^="mailto:"] {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+}
+@media (max-width: 800px) {
+  .header-inner { min-height: 56px; }
+  .wordmark-name { font-size: 1.15rem; }
+}
