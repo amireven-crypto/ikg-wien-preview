@@ -8,11 +8,11 @@
 <meta content="Konzept-Demo einer Neugestaltung von ikg-wien.at. Keine offizielle Seite der IKG Wien. Inhalte stammen von der offiziellen Website." name="description"/>
 <meta content="noindex, nofollow" name="robots"/>
 <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
-<link href="css/styles.css?ver=1.8.1" rel="stylesheet"/>
-<link href="css/scroll-reveal.css?ver=1.8.1" rel="stylesheet"/>
-<link href="css/fade-in-up.css?ver=1.8.1" rel="stylesheet"/>
-<link href="css/stagger-list.css?ver=1.8.1" rel="stylesheet"/>
-<link href="css/card-lift-hover.css?ver=1.8.1" rel="stylesheet"/>
+<link href="css/styles.css?ver=1.9.0" rel="stylesheet"/>
+<link href="css/scroll-reveal.css?ver=1.9.0" rel="stylesheet"/>
+<link href="css/fade-in-up.css?ver=1.9.0" rel="stylesheet"/>
+<link href="css/stagger-list.css?ver=1.9.0" rel="stylesheet"/>
+<link href="css/card-lift-hover.css?ver=1.9.0" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
@@ -92,20 +92,12 @@
 <span class="nav-tools">
 <a class="nav-tool" href="search.html">Search</a>
 <a class="nav-tool" href="newsletter.html">Newsletter</a>
-<span class="lang-switch" lang="und">
-<a href="index.html">Deutsch</a>
-<span aria-hidden="true">·</span>
-<a href="en.html">English</a>
-<span aria-hidden="true">·</span>
-<a href="hebrew-landing-page.html">עברית</a>
+
 </span>
-</span>
-<a class="btn btn-primary" href="jetztspenden.html">Spenden</a>
 </nav>
-<div class="header-tools"><div class="text-size" role="group" aria-label="Schriftgröße"><button type="button" class="text-size-btn" data-text-size="down" aria-label="Schrift verkleinern" title="Schrift verkleinern">A−</button><button type="button" class="text-size-btn" data-text-size="up" aria-label="Schrift vergrößern" title="Schrift vergrößern">A+</button></div>
-<button aria-controls="mobile-nav" aria-expanded="false" aria-label="Menü öffnen" class="menu-toggle" type="button">
+<div class="header-end"><div class="lang-switcher"><button type="button" class="lang-switcher-toggle" aria-expanded="false" aria-haspopup="menu" aria-controls="lang-menu" id="lang-switcher-btn" aria-label="Sprache, Deutsch"><img src="img/flags/at.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-code">DE</span><span class="lang-chevron" aria-hidden="true"></span></button><ul class="lang-menu" id="lang-menu" role="menu" hidden="" aria-labelledby="lang-switcher-btn"><li role="none"><a href="Likrat.html" hreflang="de" lang="de" role="menuitem" aria-current="page" class="is-current"><img src="img/flags/at.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">Deutsch</span><span class="lang-code-opt">DE</span></a></li><li role="none"><a href="en/likrat-english.html" hreflang="en" lang="en" role="menuitem"><img src="img/flags/gb.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">English</span><span class="lang-code-opt">EN</span></a></li><li role="none"><a href="hebrew-landing-page.html" hreflang="he" lang="he" role="menuitem"><img src="img/flags/il.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">עברית</span><span class="lang-code-opt">HE</span></a></li><li role="none"><a href="ru.html" hreflang="ru" lang="ru" role="menuitem"><img src="img/flags/ru.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">Русский</span><span class="lang-code-opt">RU</span></a></li></ul></div><a class="btn btn-primary header-spenden" href="jetztspenden.html">Spenden</a><div class="header-tools"><div class="text-size" role="group" aria-label="Schriftgröße"><button type="button" class="text-size-btn" data-text-size="down" aria-label="Schrift verkleinern" title="Schrift verkleinern">A−</button><button type="button" class="text-size-btn" data-text-size="up" aria-label="Schrift vergrößern" title="Schrift vergrößern">A+</button></div><button aria-controls="mobile-nav" aria-expanded="false" aria-label="Menü öffnen" class="menu-toggle" type="button">
 <span></span>
-</button></div>
+</button></div></div>
 </div>
 <div class="wrap">
 <nav aria-label="Mobiles Menü" class="nav-mobile" hidden="" id="mobile-nav">
@@ -172,11 +164,7 @@
 <a href="kontakt.html">Kontakt</a>
 <a href="search.html">Search</a>
 <a href="newsletter.html">Newsletter</a>
-<p class="mobile-langs">
-<a href="index.html">Deutsch</a>
-<a href="en.html">English</a>
-<a href="hebrew-landing-page.html">עברית</a>
-</p>
+<nav class="lang-flags" aria-label="Sprache"><a href="Likrat.html" hreflang="de" lang="de" aria-current="page" class="is-current"><img src="img/flags/at.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">Deutsch</span></a><a href="en/likrat-english.html" hreflang="en" lang="en"><img src="img/flags/gb.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">English</span></a><a href="hebrew-landing-page.html" hreflang="he" lang="he"><img src="img/flags/il.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">עברית</span></a><a href="ru.html" hreflang="ru" lang="ru"><img src="img/flags/ru.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">Русский</span></a></nav>
 <a class="btn btn-primary" href="jetztspenden.html">Spenden</a>
 </nav>
 </div>
@@ -733,7 +721,7 @@ Jüdinnen und Juden KLARTEXT – über Identität, Begegnungen und alles, was si
 <div class="swiper-slide -auto-h">
 <div class="flex flex-col h-full">
 <div>
-<figure class="official-fig"><img alt="Design ohne titel 4" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="img/official/design-ohne-titel-4-48ea37e9623ef755.jpg" width="260"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<figure class="official-fig"><img alt="Design ohne titel 4" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="img/official/design-ohne-titel-4-48ea37e9623ef755.png" width="260"/><figcaption>Bild: IKG Wien</figcaption></figure>
 </div>
 <div class="flex flex-col h-full p-4 border-b border-l border-r rounded-b-sm border-light-indigo">
 <a class="block mb-2 mt-3 hover:underline" href="https://www.youtube.com/watch?v=Vy3fjY0oL-Y&amp;list=PLEd3p8ISpU1tkxdm8KcBMJZqhyU-LGWxM&amp;index=2" rel="noopener noreferrer" target="_blank" title="Öffnet in neuem Tab">
@@ -757,7 +745,7 @@ Jüdinnen und Juden KLARTEXT – über Identität, Begegnungen und alles, was si
 <div class="swiper-slide -auto-h">
 <div class="flex flex-col h-full">
 <div>
-<figure class="official-fig"><img alt="Design ohne titel 6" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="img/official/design-ohne-titel-6-78abad1b9dba1bbb.jpg" width="260"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<figure class="official-fig"><img alt="Design ohne titel 6" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="img/official/design-ohne-titel-6-78abad1b9dba1bbb.png" width="260"/><figcaption>Bild: IKG Wien</figcaption></figure>
 </div>
 <div class="flex flex-col h-full p-4 border-b border-l border-r rounded-b-sm border-light-indigo">
 <a class="block mb-2 mt-3 hover:underline" href="https://www.youtube.com/watch?v=VI-OzS2ecJg&amp;list=PLEd3p8ISpU1tkxdm8KcBMJZqhyU-LGWxM&amp;index=4" rel="noopener noreferrer" target="_blank" title="Öffnet in neuem Tab">
@@ -781,7 +769,7 @@ Jüdinnen und Juden KLARTEXT – über Identität, Begegnungen und alles, was si
 <div class="swiper-slide -auto-h">
 <div class="flex flex-col h-full">
 <div>
-<figure class="official-fig"><img alt="Design ohne titel 7" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="img/official/design-ohne-titel-7-ff5d1cceec5768b9.jpg" width="260"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<figure class="official-fig"><img alt="Design ohne titel 7" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="img/official/design-ohne-titel-7-ff5d1cceec5768b9.png" width="260"/><figcaption>Bild: IKG Wien</figcaption></figure>
 </div>
 <div class="flex flex-col h-full p-4 border-b border-l border-r rounded-b-sm border-light-indigo">
 <a class="block mb-2 mt-3 hover:underline" href="https://www.youtube.com/watch?v=wsk5FVimZy4&amp;list=PLEd3p8ISpU1tkxdm8KcBMJZqhyU-LGWxM&amp;index=5" rel="noopener noreferrer" target="_blank" title="Öffnet in neuem Tab">
@@ -805,7 +793,7 @@ Jüdinnen und Juden KLARTEXT – über Identität, Begegnungen und alles, was si
 <div class="swiper-slide -auto-h">
 <div class="flex flex-col h-full">
 <div>
-<figure class="official-fig"><img alt="Design ohne titel (6)" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="img/official/design-ohne-titel-6-8bca80e2f3f50710.jpg" width="260"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<figure class="official-fig"><img alt="Design ohne titel (6)" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="img/official/design-ohne-titel-6-8bca80e2f3f50710.png" width="260"/><figcaption>Bild: IKG Wien</figcaption></figure>
 </div>
 <div class="flex flex-col h-full p-4 border-b border-l border-r rounded-b-sm border-light-indigo">
 <a class="block mb-2 mt-3 hover:underline" href="https://www.youtube.com/watch?v=fuxfxWPPTOg" rel="noopener noreferrer" target="_blank" title="Öffnet in neuem Tab">
@@ -829,7 +817,7 @@ Jüdinnen und Juden KLARTEXT – über Identität, Begegnungen und alles, was si
 <div class="swiper-slide -auto-h">
 <div class="flex flex-col h-full">
 <div>
-<figure class="official-fig"><img alt="Design ohne titel (7)" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="img/official/design-ohne-titel-7-dbdbadfaa0934825.jpg" width="260"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<figure class="official-fig"><img alt="Design ohne titel (7)" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="img/official/design-ohne-titel-7-dbdbadfaa0934825.png" width="260"/><figcaption>Bild: IKG Wien</figcaption></figure>
 </div>
 <div class="flex flex-col h-full p-4 border-b border-l border-r rounded-b-sm border-light-indigo">
 <a class="block mb-2 mt-3 hover:underline" href="https://www.youtube.com/watch?v=TqqBpwpRYbU" rel="noopener noreferrer" target="_blank" title="Öffnet in neuem Tab">
@@ -853,7 +841,7 @@ Jüdinnen und Juden KLARTEXT – über Identität, Begegnungen und alles, was si
 <div class="swiper-slide -auto-h">
 <div class="flex flex-col h-full">
 <div>
-<figure class="official-fig"><img alt="Design ohne titel (4)" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="img/official/design-ohne-titel-4-d550ca63baae38a4.jpg" width="260"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<figure class="official-fig"><img alt="Design ohne titel (4)" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="img/official/design-ohne-titel-4-d550ca63baae38a4.png" width="260"/><figcaption>Bild: IKG Wien</figcaption></figure>
 </div>
 <div class="flex flex-col h-full p-4 border-b border-l border-r rounded-b-sm border-light-indigo">
 <a class="block mb-2 mt-3 hover:underline" href="https://www.youtube.com/watch?v=lOPBhAziaaU&amp;list=PLEd3p8ISpU1tkxdm8KcBMJZqhyU-LGWxM&amp;index=1" rel="noopener noreferrer" target="_blank" title="Öffnet in neuem Tab">
@@ -877,7 +865,7 @@ Jüdinnen und Juden KLARTEXT – über Identität, Begegnungen und alles, was si
 <div class="swiper-slide -auto-h">
 <div class="flex flex-col h-full">
 <div>
-<figure class="official-fig"><img alt="Disclaimer" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="img/official/disclaimer-648092f0f4774493.jpg" width="260"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<figure class="official-fig"><img alt="Disclaimer" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="img/official/disclaimer-648092f0f4774493.png" width="260"/><figcaption>Bild: IKG Wien</figcaption></figure>
 </div>
 <div class="flex flex-col h-full p-4 border-b border-l border-r rounded-b-sm border-light-indigo">
 <a class="block mb-2 mt-3 hover:underline" href="https://youtu.be/adLr9K9ozjs" rel="noopener noreferrer" target="_blank" title="Öffnet in neuem Tab">
@@ -901,7 +889,7 @@ Jüdinnen und Juden KLARTEXT – über Identität, Begegnungen und alles, was si
 <div class="swiper-slide -auto-h">
 <div class="flex flex-col h-full">
 <div>
-<figure class="official-fig"><img alt="Design ohne titel 8" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="img/official/design-ohne-titel-8-f92a2482db9661ab.jpg" width="260"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<figure class="official-fig"><img alt="Design ohne titel 8" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="img/official/design-ohne-titel-8-f92a2482db9661ab.png" width="260"/><figcaption>Bild: IKG Wien</figcaption></figure>
 </div>
 <div class="flex flex-col h-full p-4 border-b border-l border-r rounded-b-sm border-light-indigo">
 <a class="block mb-2 mt-3 hover:underline" href="https://www.youtube.com/watch?v=apHq3WA_jc8" rel="noopener noreferrer" target="_blank" title="Öffnet in neuem Tab">
@@ -925,7 +913,7 @@ Jüdinnen und Juden KLARTEXT – über Identität, Begegnungen und alles, was si
 <div class="swiper-slide -auto-h">
 <div class="flex flex-col h-full">
 <div>
-<figure class="official-fig"><img alt="Design ohne titel (5)" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="img/official/design-ohne-titel-5-cdc21a34f503b962.jpg" width="260"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<figure class="official-fig"><img alt="Design ohne titel (5)" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="img/official/design-ohne-titel-5-cdc21a34f503b962.png" width="260"/><figcaption>Bild: IKG Wien</figcaption></figure>
 </div>
 <div class="flex flex-col h-full p-4 border-b border-l border-r rounded-b-sm border-light-indigo">
 <a class="block mb-2 mt-3 hover:underline" href="https://www.youtube.com/watch?v=aqmMjJU2AcA" rel="noopener noreferrer" target="_blank" title="Öffnet in neuem Tab">
@@ -966,8 +954,8 @@ Jüdinnen und Juden KLARTEXT – über Identität, Begegnungen und alles, was si
 </div>
 <h2 class="block header-block" dir="auto">Mit freundlicher Unterstützung von</h2><photo-gallery class="base-block gallery-block">
 <div class="gallery-block-photo" data-id="vjVVlIO2N8Q3LGfGWOo8G">
-<a class="gallery-block-photo-link" data-lg-size="500-500" data-sub-html="#caption-vjVVlIO2N8Q3LGfGWOo8G" href="img/official/1-262de05139af9c44.jpg" target="_blank">
-<figure class="official-fig"><img alt="1" class="gallery-block-image" src="img/official/1-262de05139af9c44.jpg" width="256"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<a class="gallery-block-photo-link" data-lg-size="500-500" data-sub-html="#caption-vjVVlIO2N8Q3LGfGWOo8G" href="img/official/1-262de05139af9c44.png" target="_blank">
+<figure class="official-fig"><img alt="1" class="gallery-block-image" src="img/official/1-262de05139af9c44.png" width="256"/><figcaption>Bild: IKG Wien</figcaption></figure>
 </a>
 <div class="gallery-block-caption" id="caption-vjVVlIO2N8Q3LGfGWOo8G">
 <span>BK Amt</span>
@@ -976,8 +964,8 @@ Jüdinnen und Juden KLARTEXT – über Identität, Begegnungen und alles, was si
 </a> </div>
 </div>
 <div class="gallery-block-photo" data-id="FBZqtFvSB5yAMfMIZLIKt">
-<a class="gallery-block-photo-link" data-lg-size="500-500" data-sub-html="#caption-FBZqtFvSB5yAMfMIZLIKt" href="img/official/2-b5edee1c2deb6c0e.jpg" target="_blank">
-<figure class="official-fig"><img alt="2" class="gallery-block-image" src="img/official/2-b5edee1c2deb6c0e.jpg" width="256"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<a class="gallery-block-photo-link" data-lg-size="500-500" data-sub-html="#caption-FBZqtFvSB5yAMfMIZLIKt" href="img/official/2-b5edee1c2deb6c0e.png" target="_blank">
+<figure class="official-fig"><img alt="2" class="gallery-block-image" src="img/official/2-b5edee1c2deb6c0e.png" width="256"/><figcaption>Bild: IKG Wien</figcaption></figure>
 </a>
 <div class="gallery-block-caption" id="caption-FBZqtFvSB5yAMfMIZLIKt">
 <span>Stadt wien kultur</span>
@@ -986,8 +974,8 @@ Jüdinnen und Juden KLARTEXT – über Identität, Begegnungen und alles, was si
 </a> </div>
 </div>
 <div class="gallery-block-photo" data-id="_guKBRG_6W7fJe42iggk6">
-<a class="gallery-block-photo-link" data-lg-size="500-500" data-sub-html="#caption-_guKBRG_6W7fJe42iggk6" href="img/official/5-3115c9c933ad6996.jpg" target="_blank">
-<figure class="official-fig"><img alt="5" class="gallery-block-image" src="img/official/5-3115c9c933ad6996.jpg" width="256"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<a class="gallery-block-photo-link" data-lg-size="500-500" data-sub-html="#caption-_guKBRG_6W7fJe42iggk6" href="img/official/5-3115c9c933ad6996.png" target="_blank">
+<figure class="official-fig"><img alt="5" class="gallery-block-image" src="img/official/5-3115c9c933ad6996.png" width="256"/><figcaption>Bild: IKG Wien</figcaption></figure>
 </a>
 <div class="gallery-block-caption" id="caption-_guKBRG_6W7fJe42iggk6">
 <span>ZukunftsFonds</span>
@@ -996,16 +984,16 @@ Jüdinnen und Juden KLARTEXT – über Identität, Begegnungen und alles, was si
 </a> </div>
 </div>
 <div class="gallery-block-photo" data-id="dt_7H88NNbRItocduMqbd">
-<a class="gallery-block-photo-link" data-lg-size="500-500" data-sub-html="#caption-dt_7H88NNbRItocduMqbd" href="img/official/3-7efca266000a2120.jpg" target="_blank">
-<figure class="official-fig"><img alt="3" class="gallery-block-image" src="img/official/3-7efca266000a2120.jpg" width="256"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<a class="gallery-block-photo-link" data-lg-size="500-500" data-sub-html="#caption-dt_7H88NNbRItocduMqbd" href="img/official/3-7efca266000a2120.png" target="_blank">
+<figure class="official-fig"><img alt="3" class="gallery-block-image" src="img/official/3-7efca266000a2120.png" width="256"/><figcaption>Bild: IKG Wien</figcaption></figure>
 </a>
 <div class="gallery-block-caption" id="caption-dt_7H88NNbRItocduMqbd">
 <span>BM Bildung,Wissenschaft &amp; Forschung </span>
 </div>
 </div>
 <div class="gallery-block-photo" data-id="5VUGOs1jOb7lX-vdz8Ptb">
-<a class="gallery-block-photo-link" data-lg-size="500-500" data-sub-html="#caption-5VUGOs1jOb7lX-vdz8Ptb" href="img/official/4-16223c97db5c675e.jpg" target="_blank">
-<figure class="official-fig"><img alt="4" class="gallery-block-image" src="img/official/4-16223c97db5c675e.jpg" width="256"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<a class="gallery-block-photo-link" data-lg-size="500-500" data-sub-html="#caption-5VUGOs1jOb7lX-vdz8Ptb" href="img/official/4-16223c97db5c675e.png" target="_blank">
+<figure class="official-fig"><img alt="4" class="gallery-block-image" src="img/official/4-16223c97db5c675e.png" width="256"/><figcaption>Bild: IKG Wien</figcaption></figure>
 </a>
 <div class="gallery-block-caption" id="caption-5VUGOs1jOb7lX-vdz8Ptb">
 <span>EU</span>
@@ -1014,8 +1002,8 @@ Jüdinnen und Juden KLARTEXT – über Identität, Begegnungen und alles, was si
 </a> </div>
 </div>
 <div class="gallery-block-photo" data-id="uX1n6UQk71oboQpLFGfR4">
-<a class="gallery-block-photo-link" data-lg-size="500-500" data-sub-html="#caption-uX1n6UQk71oboQpLFGfR4" href="img/official/6-7b966674ee549496.jpg" target="_blank">
-<figure class="official-fig"><img alt="6" class="gallery-block-image" src="img/official/6-7b966674ee549496.jpg" width="256"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<a class="gallery-block-photo-link" data-lg-size="500-500" data-sub-html="#caption-uX1n6UQk71oboQpLFGfR4" href="img/official/6-7b966674ee549496.png" target="_blank">
+<figure class="official-fig"><img alt="6" class="gallery-block-image" src="img/official/6-7b966674ee549496.png" width="256"/><figcaption>Bild: IKG Wien</figcaption></figure>
 </a>
 <div class="gallery-block-caption" id="caption-uX1n6UQk71oboQpLFGfR4">
 <span>NationalFonds</span>
@@ -1154,9 +1142,9 @@ Jüdinnen und Juden KLARTEXT – über Identität, Begegnungen und alles, was si
       </p>
 </div>
 </footer>
-<script src="js/scroll-reveal.js?ver=1.8.1"></script>
-<script src="js/fade-in-up.js?ver=1.8.1"></script>
-<script src="js/stagger-list.js?ver=1.8.1"></script>
-<script src="js/site.js?ver=1.8.1"></script>
+<script src="js/scroll-reveal.js?ver=1.9.0"></script>
+<script src="js/fade-in-up.js?ver=1.9.0"></script>
+<script src="js/stagger-list.js?ver=1.9.0"></script>
+<script src="js/site.js?ver=1.9.0"></script>
 </body>
 </html>

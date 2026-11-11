@@ -8,11 +8,11 @@
 <meta content="Konzept-Demo einer Neugestaltung von ikg-wien.at. Keine offizielle Seite der IKG Wien. Inhalte stammen von der offiziellen Website." name="description"/>
 <meta content="noindex, nofollow" name="robots"/>
 <link href="../favicon.svg" rel="icon" type="image/svg+xml"/>
-<link href="../css/styles.css?ver=1.8.1" rel="stylesheet"/>
-<link href="../css/scroll-reveal.css?ver=1.8.1" rel="stylesheet"/>
-<link href="../css/fade-in-up.css?ver=1.8.1" rel="stylesheet"/>
-<link href="../css/stagger-list.css?ver=1.8.1" rel="stylesheet"/>
-<link href="../css/card-lift-hover.css?ver=1.8.1" rel="stylesheet"/>
+<link href="../css/styles.css?ver=1.9.0" rel="stylesheet"/>
+<link href="../css/scroll-reveal.css?ver=1.9.0" rel="stylesheet"/>
+<link href="../css/fade-in-up.css?ver=1.9.0" rel="stylesheet"/>
+<link href="../css/stagger-list.css?ver=1.9.0" rel="stylesheet"/>
+<link href="../css/card-lift-hover.css?ver=1.9.0" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
@@ -92,20 +92,12 @@
 <span class="nav-tools">
 <a class="nav-tool" href="../search.html">Search</a>
 <a class="nav-tool" href="../newsletter.html">Newsletter</a>
-<span class="lang-switch" lang="und">
-<a href="../index.html">Deutsch</a>
-<span aria-hidden="true">·</span>
-<a href="../en.html">English</a>
-<span aria-hidden="true">·</span>
-<a href="../hebrew-landing-page.html">עברית</a>
+
 </span>
-</span>
-<a class="btn btn-primary" href="../jetztspenden.html">Spenden</a>
 </nav>
-<div class="header-tools"><div class="text-size" role="group" aria-label="Schriftgröße"><button type="button" class="text-size-btn" data-text-size="down" aria-label="Schrift verkleinern" title="Schrift verkleinern">A−</button><button type="button" class="text-size-btn" data-text-size="up" aria-label="Schrift vergrößern" title="Schrift vergrößern">A+</button></div>
-<button aria-controls="mobile-nav" aria-expanded="false" aria-label="Menü öffnen" class="menu-toggle" type="button">
+<div class="header-end"><div class="lang-switcher"><button type="button" class="lang-switcher-toggle" aria-expanded="false" aria-haspopup="menu" aria-controls="lang-menu" id="lang-switcher-btn" aria-label="Sprache, Deutsch"><img src="../img/flags/at.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-code">DE</span><span class="lang-chevron" aria-hidden="true"></span></button><ul class="lang-menu" id="lang-menu" role="menu" hidden="" aria-labelledby="lang-switcher-btn"><li role="none"><a href="sicheres-pessach.html" hreflang="de" lang="de" role="menuitem" aria-current="page" class="is-current"><img src="../img/flags/at.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">Deutsch</span><span class="lang-code-opt">DE</span></a></li><li role="none"><a href="../en.html" hreflang="en" lang="en" role="menuitem"><img src="../img/flags/gb.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">English</span><span class="lang-code-opt">EN</span></a></li><li role="none"><a href="../hebrew-landing-page.html" hreflang="he" lang="he" role="menuitem"><img src="../img/flags/il.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">עברית</span><span class="lang-code-opt">HE</span></a></li><li role="none"><a href="../ru.html" hreflang="ru" lang="ru" role="menuitem"><img src="../img/flags/ru.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">Русский</span><span class="lang-code-opt">RU</span></a></li></ul></div><a class="btn btn-primary header-spenden" href="../jetztspenden.html">Spenden</a><div class="header-tools"><div class="text-size" role="group" aria-label="Schriftgröße"><button type="button" class="text-size-btn" data-text-size="down" aria-label="Schrift verkleinern" title="Schrift verkleinern">A−</button><button type="button" class="text-size-btn" data-text-size="up" aria-label="Schrift vergrößern" title="Schrift vergrößern">A+</button></div><button aria-controls="mobile-nav" aria-expanded="false" aria-label="Menü öffnen" class="menu-toggle" type="button">
 <span></span>
-</button></div>
+</button></div></div>
 </div>
 <div class="wrap">
 <nav aria-label="Mobiles Menü" class="nav-mobile" hidden="" id="mobile-nav">
@@ -172,11 +164,7 @@
 <a href="../kontakt.html">Kontakt</a>
 <a href="../search.html">Search</a>
 <a href="../newsletter.html">Newsletter</a>
-<p class="mobile-langs">
-<a href="../index.html">Deutsch</a>
-<a href="../en.html">English</a>
-<a href="../hebrew-landing-page.html">עברית</a>
-</p>
+<nav class="lang-flags" aria-label="Sprache"><a href="sicheres-pessach.html" hreflang="de" lang="de" aria-current="page" class="is-current"><img src="../img/flags/at.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">Deutsch</span></a><a href="../en.html" hreflang="en" lang="en"><img src="../img/flags/gb.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">English</span></a><a href="../hebrew-landing-page.html" hreflang="he" lang="he"><img src="../img/flags/il.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">עברית</span></a><a href="../ru.html" hreflang="ru" lang="ru"><img src="../img/flags/ru.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">Русский</span></a></nav>
 <a class="btn btn-primary" href="../jetztspenden.html">Spenden</a>
 </nav>
 </div>
@@ -217,7 +205,7 @@
 <div class="container relative z-10">
 <div class="pt-8 m-auto mb-8 md:w-2/3">
 <div class="w-full">
-<figure class="official-fig"><img alt="Chag (1920 × 1080 px) 6" class="w-full" height="600" src="../img/official/chag-1920-x-1080-px-6-6d9e43343040bc54.jpg" width="970"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<figure class="official-fig"><img alt="Chag (1920 × 1080 px) 6" class="w-full" height="600" src="../img/official/chag-1920-x-1080-px-6-6d9e43343040bc54.png" width="970"/><figcaption>Bild: IKG Wien</figcaption></figure>
 </div>
 </div>
 </div>
@@ -234,7 +222,7 @@
 <p class="block paragraph-block" dir="auto">Falls Sie einen Gast haben, die oder der sich noch nicht geimpft haben sollte, könnten Sie die Gelegenheit nutzen, darauf hinzuweisen, dass eine <b>Impfung ein sichereres Zusammensein ermöglicht.  </b></p>
 <p class="block paragraph-block" dir="auto">Folgend finden Sie das Corona-Update von Univ. Prof. Dr. Arnold Pollak </p>
 <h2 class="block header-block" dir="auto">Wie lange hält der Schutz nach einer Infektion? Soll man sich trotzdem impfen lassen? </h2>
-<figure class="block image-block -wrap -right -max-50%" dir="auto"><img alt="Virus g6f0b017dd 1280" class="image-block-image" height="520" src="../img/official/virus-g6f0b017dd_1280-d91d54792ed9c7c3.jpg" width="800"/><figcaption class="image-block-caption">Corona Welt Pixabay</figcaption></figure>
+<figure class="block image-block -wrap -right -max-50%" dir="auto"><img alt="Virus g6f0b017dd 1280" class="image-block-image" height="520" src="../img/official/virus-g6f0b017dd_1280-d91d54792ed9c7c3.png" width="800"/><figcaption class="image-block-caption">Corona Welt Pixabay</figcaption></figure>
 <p class="block paragraph-block" dir="auto">Zwei Dosen des Pfizer/Biontech-Impfstoffs sind mit einem hohen Kurzzeitschutz gegen eine SARS-CoV-2-Infektion verbunden. Dieser Schutz lässt aber nach sechs Monaten erheblich nach. Die durch die Impfung verstärkte infektionsbedingte Immunität bleibt länger als ein Jahr nach der Infektion hoch. </p>
 <p class="block paragraph-block" dir="auto">Eine diesbezüglich sehr wichtige Studie wurde vor etwa drei Wochen in einem der renommiertesten Journalen NEJM veröffentlicht. Untersucht wurden rund 36.000 Personen. Zum Studienzeitpunkt war die Omikron-Variante noch nicht vorherrschend. </p>
 <h2 class="block header-block" dir="auto">Die 4. Impfung  </h2>
@@ -412,9 +400,9 @@
       </p>
 </div>
 </footer>
-<script src="../js/scroll-reveal.js?ver=1.8.1"></script>
-<script src="../js/fade-in-up.js?ver=1.8.1"></script>
-<script src="../js/stagger-list.js?ver=1.8.1"></script>
-<script src="../js/site.js?ver=1.8.1"></script>
+<script src="../js/scroll-reveal.js?ver=1.9.0"></script>
+<script src="../js/fade-in-up.js?ver=1.9.0"></script>
+<script src="../js/stagger-list.js?ver=1.9.0"></script>
+<script src="../js/site.js?ver=1.9.0"></script>
 </body>
 </html>

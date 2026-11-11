@@ -8,11 +8,11 @@
 <meta content="Konzept-Demo einer Neugestaltung von ikg-wien.at. Keine offizielle Seite der IKG Wien. Inhalte stammen von der offiziellen Website." name="description"/>
 <meta content="noindex, nofollow" name="robots"/>
 <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
-<link href="css/styles.css?ver=1.8.1" rel="stylesheet"/>
-<link href="css/scroll-reveal.css?ver=1.8.1" rel="stylesheet"/>
-<link href="css/fade-in-up.css?ver=1.8.1" rel="stylesheet"/>
-<link href="css/stagger-list.css?ver=1.8.1" rel="stylesheet"/>
-<link href="css/card-lift-hover.css?ver=1.8.1" rel="stylesheet"/>
+<link href="css/styles.css?ver=1.9.0" rel="stylesheet"/>
+<link href="css/scroll-reveal.css?ver=1.9.0" rel="stylesheet"/>
+<link href="css/fade-in-up.css?ver=1.9.0" rel="stylesheet"/>
+<link href="css/stagger-list.css?ver=1.9.0" rel="stylesheet"/>
+<link href="css/card-lift-hover.css?ver=1.9.0" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
@@ -92,20 +92,12 @@
 <span class="nav-tools">
 <a class="nav-tool" href="search.html">Search</a>
 <a class="nav-tool" href="newsletter.html">Newsletter</a>
-<span class="lang-switch" lang="und">
-<a href="index.html">Deutsch</a>
-<span aria-hidden="true">·</span>
-<a href="en.html">English</a>
-<span aria-hidden="true">·</span>
-<a href="hebrew-landing-page.html">עברית</a>
+
 </span>
-</span>
-<a class="btn btn-primary" href="jetztspenden.html">Spenden</a>
 </nav>
-<div class="header-tools"><div class="text-size" role="group" aria-label="Schriftgröße"><button type="button" class="text-size-btn" data-text-size="down" aria-label="Schrift verkleinern" title="Schrift verkleinern">A−</button><button type="button" class="text-size-btn" data-text-size="up" aria-label="Schrift vergrößern" title="Schrift vergrößern">A+</button></div>
-<button aria-controls="mobile-nav" aria-expanded="false" aria-label="Menü öffnen" class="menu-toggle" type="button">
+<div class="header-end"><div class="lang-switcher"><button type="button" class="lang-switcher-toggle" aria-expanded="false" aria-haspopup="menu" aria-controls="lang-menu" id="lang-switcher-btn" aria-label="Language, English"><img src="img/flags/gb.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-code">EN</span><span class="lang-chevron" aria-hidden="true"></span></button><ul class="lang-menu" id="lang-menu" role="menu" hidden="" aria-labelledby="lang-switcher-btn"><li role="none"><a href="index.html" hreflang="de" lang="de" role="menuitem"><img src="img/flags/at.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">Deutsch</span><span class="lang-code-opt">DE</span></a></li><li role="none"><a href="en.html" hreflang="en" lang="en" role="menuitem" aria-current="page" class="is-current"><img src="img/flags/gb.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">English</span><span class="lang-code-opt">EN</span></a></li><li role="none"><a href="hebrew-landing-page.html" hreflang="he" lang="he" role="menuitem"><img src="img/flags/il.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">עברית</span><span class="lang-code-opt">HE</span></a></li><li role="none"><a href="ru.html" hreflang="ru" lang="ru" role="menuitem"><img src="img/flags/ru.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">Русский</span><span class="lang-code-opt">RU</span></a></li></ul></div><a class="btn btn-primary header-spenden" href="jetztspenden.html">Spenden</a><div class="header-tools"><div class="text-size" role="group" aria-label="Schriftgröße"><button type="button" class="text-size-btn" data-text-size="down" aria-label="Schrift verkleinern" title="Schrift verkleinern">A−</button><button type="button" class="text-size-btn" data-text-size="up" aria-label="Schrift vergrößern" title="Schrift vergrößern">A+</button></div><button aria-controls="mobile-nav" aria-expanded="false" aria-label="Menü öffnen" class="menu-toggle" type="button">
 <span></span>
-</button></div>
+</button></div></div>
 </div>
 <div class="wrap">
 <nav aria-label="Mobiles Menü" class="nav-mobile" hidden="" id="mobile-nav">
@@ -172,11 +164,7 @@
 <a href="kontakt.html">Kontakt</a>
 <a href="search.html">Search</a>
 <a href="newsletter.html">Newsletter</a>
-<p class="mobile-langs">
-<a href="index.html">Deutsch</a>
-<a href="en.html">English</a>
-<a href="hebrew-landing-page.html">עברית</a>
-</p>
+<nav class="lang-flags" aria-label="Language"><a href="index.html" hreflang="de" lang="de"><img src="img/flags/at.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">Deutsch</span></a><a href="en.html" hreflang="en" lang="en" aria-current="page" class="is-current"><img src="img/flags/gb.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">English</span></a><a href="hebrew-landing-page.html" hreflang="he" lang="he"><img src="img/flags/il.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">עברית</span></a><a href="ru.html" hreflang="ru" lang="ru"><img src="img/flags/ru.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">Русский</span></a></nav>
 <a class="btn btn-primary" href="jetztspenden.html">Spenden</a>
 </nav>
 </div>
@@ -287,7 +275,7 @@ w...
 </div>
 </div></a>
 <a class="swiper-slide md:px-24 md:flex items-center" href="en/news/vienna-city-temple-cup-for-the-200th-anniversary.html">
-<figure class="official-fig"><img alt="Bildschirmfoto 2025 10 17 um 13.37.52" class="md:hidden mb-4" height="300" src="img/official/bildschirmfoto-2025-10-17-um-13-37-52-4562cb79f4f19123.jpg" width="593"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<figure class="official-fig"><img alt="Bildschirmfoto 2025 10 17 um 13.37.52" class="md:hidden mb-4" height="300" src="img/official/bildschirmfoto-2025-10-17-um-13-37-52-4562cb79f4f19123.png" width="593"/><figcaption>Bild: IKG Wien</figcaption></figure>
 <div class="bg-white rounded-sm md:p-8">
 <div class="flex items-center">
 <div class="px-1 py-1 mr-2 bg-red"></div>
@@ -478,19 +466,19 @@ President Oskar Deutsch, Vic...
 <div class="w-full swiper-container" data-swiper-slideshow="">
 <div class="flex flex-row flex-auto my-10 swiper-wrapper">
 <a class="swiper-slide" href="index.html" target="_blank">
-<figure class="official-fig"><img alt="Events" class="rounded-full overflow-hidden" height="87" src="img/official/events-179df7a88a4d170e.jpg" width="87"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<figure class="official-fig"><img alt="Events" class="rounded-full overflow-hidden" height="87" src="img/official/events-179df7a88a4d170e.png" width="87"/><figcaption>Bild: IKG Wien</figcaption></figure>
 <span> Events <span>
 </span></span></a> <a class="swiper-slide" href="en/youth.html">
-<figure class="official-fig"><img alt="Youth" class="rounded-full overflow-hidden" height="87" src="img/official/jugend-d1d8a501f1224a46.jpg" width="87"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<figure class="official-fig"><img alt="Youth" class="rounded-full overflow-hidden" height="87" src="img/official/jugend-d1d8a501f1224a46.png" width="87"/><figcaption>Bild: IKG Wien</figcaption></figure>
 <span> Youth <span>
 </span></span></a> <a class="swiper-slide" href="en/rabbinate-en.html">
-<figure class="official-fig"><img alt="Rabbinate" class="rounded-full overflow-hidden" height="87" src="img/official/synagogen-ea993277f7aacbb3.jpg" width="87"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<figure class="official-fig"><img alt="Rabbinate" class="rounded-full overflow-hidden" height="87" src="img/official/synagogen-ea993277f7aacbb3.png" width="87"/><figcaption>Bild: IKG Wien</figcaption></figure>
 <span> Rabbinate <span>
 </span></span></a> <a class="swiper-slide" href="en/experience-culture.html">
-<figure class="official-fig"><img alt="Culture" class="rounded-full overflow-hidden" height="87" src="img/official/kultur-2-4ca2d4097aa72c97.jpg" width="87"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<figure class="official-fig"><img alt="Culture" class="rounded-full overflow-hidden" height="87" src="img/official/kultur-2-4ca2d4097aa72c97.png" width="87"/><figcaption>Bild: IKG Wien</figcaption></figure>
 <span> Culture <span>
 </span></span></a> <a class="swiper-slide" href="erleben/trinken-und-essen.html">
-<figure class="official-fig"><img alt="Kosher Vienna" class="rounded-full overflow-hidden" height="87" src="img/official/essen-trinken-255519d900875cca.jpg" width="87"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<figure class="official-fig"><img alt="Kosher Vienna" class="rounded-full overflow-hidden" height="87" src="img/official/essen-trinken-255519d900875cca.png" width="87"/><figcaption>Bild: IKG Wien</figcaption></figure>
 <span> Kosher Vienna <span>
 </span></span></a> </div>
 <button aria-label="Previous slide" class="swiper-slider-arrows p-2 rounded-full text-blue" data-swiper-prev="" type="button">
@@ -617,7 +605,7 @@ President Oskar Deutsch, Vic...
 <div class="home-project flex flex-col xs:flex-row space-y-8 xs:space-y-0 xs:space-x-8 border border-light-indigo rounded-sm h-full overflow-hidden" data-aos="fade-left" data-aos-duration="1500">
 <div class="xs:w-1/2">
 <a href="en/reporting-centre-for-antisemitism.html">
-<figure class="official-fig"><img alt="Logo Antisemitismus Meldestelle" class="w-full h-full object-cover" height="342" src="img/official/121297428_103268158228855_3495003463398424051_n-ec9bcc0c685b1859.jpg" width="342"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<figure class="official-fig"><img alt="Logo Antisemitismus Meldestelle" class="w-full h-full object-cover" height="342" src="img/official/121297428_103268158228855_3495003463398424051_n-ec9bcc0c685b1859.png" width="342"/><figcaption>Bild: IKG Wien</figcaption></figure>
 </a> </div>
 <div class="flex flex-col xs:w-1/2 pl-7 xs:pl-0 pr-7 pt-7 pb-6">
 <a href="en/reporting-centre-for-antisemitism.html">
@@ -683,7 +671,7 @@ President Oskar Deutsch, Vic...
 <div class="swiper-slide -auto-h">
 <div class="flex flex-col h-full" test-post="21368">
 <div>
-<figure class="official-fig"><img alt="Unbenannt 13. oktober 2026 um 15.30.39 12 beitragsbild website" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="img/official/unbenannt-13-oktober-2026-um-15-30-39-12-beitragsbild-websit-a252edf814cc2508.jpg" width="260"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<figure class="official-fig"><img alt="Unbenannt 13. oktober 2026 um 15.30.39 12 beitragsbild website" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="img/official/unbenannt-13-oktober-2026-um-15-30-39-12-beitragsbild-websit-a252edf814cc2508.png" width="260"/><figcaption>Bild: IKG Wien</figcaption></figure>
 </div>
 <div class="flex flex-col h-full p-4 border-b border-l border-r rounded-b-sm border-light-indigo">
 <div class="flex items-center">
@@ -934,9 +922,9 @@ President Oskar Deutsch, Vic...
       </p>
 </div>
 </footer>
-<script src="js/scroll-reveal.js?ver=1.8.1"></script>
-<script src="js/fade-in-up.js?ver=1.8.1"></script>
-<script src="js/stagger-list.js?ver=1.8.1"></script>
-<script src="js/site.js?ver=1.8.1"></script>
+<script src="js/scroll-reveal.js?ver=1.9.0"></script>
+<script src="js/fade-in-up.js?ver=1.9.0"></script>
+<script src="js/stagger-list.js?ver=1.9.0"></script>
+<script src="js/site.js?ver=1.9.0"></script>
 </body>
 </html>

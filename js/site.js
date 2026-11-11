@@ -11,6 +11,12 @@
     panel.classList.toggle('is-open', open);
     panel.hidden = !open;
     document.body.classList.toggle('menu-open', open);
+    if (open) {
+      document.querySelectorAll('.lang-switcher-toggle').forEach(function (b) {
+        b.setAttribute('aria-expanded', 'false');
+      });
+      document.querySelectorAll('.lang-menu').forEach(function (m) { m.hidden = true; });
+    }
   }
 
   toggle.addEventListener('click', function () {
@@ -22,7 +28,10 @@
   });
 
   document.addEventListener('keydown', function (e) {
-    if (e.key === 'Escape') setOpen(false);
+    if (e.key !== 'Escape') return;
+    var openLang = document.querySelector('.lang-switcher-toggle[aria-expanded="true"]');
+    if (openLang) return;
+    setOpen(false);
   });
 
   setOpen(false);
@@ -73,15 +82,12 @@
 })();
 
 
-/* Hero background video: pause/play toggle and reduced-motion. */
+/* Hero background video: reduced-motion only (no visible pause/play control). */
 (function () {
   'use strict';
   var video = document.getElementById('hero-video');
-  var btn = document.querySelector('.hero-media-toggle');
-  if (!video || !btn) return;
+  if (!video) return;
 
-  var iconPause = btn.querySelector('.icon-pause');
-  var iconPlay = btn.querySelector('.icon-play');
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
 
   function setPlaying(play) {
@@ -92,18 +98,10 @@
       if (attempt && attempt.catch) {
         attempt.catch(function () { setPlaying(false); });
       }
-      btn.setAttribute('aria-pressed', 'true');
-      btn.setAttribute('aria-label', 'Video pausieren');
-      if (iconPause) iconPause.hidden = false;
-      if (iconPlay) iconPlay.hidden = true;
     } else {
       video.pause();
       video.classList.remove('is-playing');
       video.classList.add('is-paused');
-      btn.setAttribute('aria-pressed', 'false');
-      btn.setAttribute('aria-label', 'Video abspielen');
-      if (iconPause) iconPause.hidden = true;
-      if (iconPlay) iconPlay.hidden = false;
     }
   }
 
@@ -111,27 +109,11 @@
     setPlaying(!reduce.matches);
   }
 
-  btn.addEventListener('click', function () {
-    setPlaying(video.paused);
-  });
-
-  video.addEventListener('error', function () {
-    setPlaying(false);
-    btn.hidden = true;
-  });
-
   if (reduce.addEventListener) reduce.addEventListener('change', applyMotionPref);
   else if (reduce.addListener) reduce.addListener(applyMotionPref);
 
   if (video.readyState >= 2) applyMotionPref();
   else video.addEventListener('loadeddata', applyMotionPref, { once: true });
-
-  /* If autoplay was blocked, reflect the paused state on the toggle. */
-  video.addEventListener('pause', function () {
-    if (!video.classList.contains('is-paused') && !document.hidden) {
-      /* paused programmatically mid-play only if we called pause */ 
-    }
-  });
 })();
 
 
@@ -204,7 +186,7 @@
 
   var links = document.querySelectorAll('.nav-desktop a[href], .nav-mobile a[href]');
   links.forEach(function (a) {
-    if (a.classList.contains('btn') || a.classList.contains('wordmark') || a.closest('.lang-switch')) return;
+    if (a.classList.contains('btn') || a.classList.contains('wordmark') || a.closest('.lang-switch, .lang-switcher, .lang-flags')) return;
     var href = (a.getAttribute('href') || '').split('#')[0].split('?')[0];
     if (!href || href.indexOf('mailto:') === 0 || href.indexOf('http') === 0) return;
     var name = href.split('/');
@@ -267,17 +249,109 @@
   });
 
   var lang = (document.documentElement.getAttribute('lang') || '').toLowerCase();
-  if (lang.indexOf('en') === 0) {
+  if (lang.indexOf('en') === 0 || lang.indexOf('he') === 0 || lang.indexOf('ru') === 0) {
     var group = document.querySelector('.text-size');
-    if (group) group.setAttribute('aria-label', 'Text size');
+    var labels = {
+      en: { group: 'Text size', down: 'Decrease text size', up: 'Increase text size' },
+      he: { group: 'גודל כתב', down: 'הקטן את הכתב', up: 'הגדל את הכתב' },
+      ru: { group: 'Размер текста', down: 'Уменьшить текст', up: 'Увеличить текст' }
+    };
+    var L = labels[lang.slice(0, 2)] || labels.en;
+    if (group) group.setAttribute('aria-label', L.group);
     document.querySelectorAll('.text-size-btn').forEach(function (btn) {
       if (btn.getAttribute('data-text-size') === 'down') {
-        btn.setAttribute('aria-label', 'Decrease text size');
-        btn.setAttribute('title', 'Decrease text size');
+        btn.setAttribute('aria-label', L.down);
+        btn.setAttribute('title', L.down);
       } else {
-        btn.setAttribute('aria-label', 'Increase text size');
-        btn.setAttribute('title', 'Increase text size');
+        btn.setAttribute('aria-label', L.up);
+        btn.setAttribute('title', L.up);
       }
     });
   }
+})();
+
+
+/* Language switcher: disclosure button + menu, Esc / arrows, CSP-safe. */
+(function () {
+  'use strict';
+  var roots = document.querySelectorAll('.lang-switcher');
+  if (!roots.length) return;
+
+  function closeAll(except) {
+    roots.forEach(function (root) {
+      if (root === except) return;
+      var btn = root.querySelector('.lang-switcher-toggle');
+      var menu = root.querySelector('.lang-menu');
+      if (btn) btn.setAttribute('aria-expanded', 'false');
+      if (menu) menu.hidden = true;
+    });
+  }
+
+  roots.forEach(function (root) {
+    var btn = root.querySelector('.lang-switcher-toggle');
+    var menu = root.querySelector('.lang-menu');
+    if (!btn || !menu) return;
+
+    function items() {
+      return Array.prototype.slice.call(menu.querySelectorAll('[role="menuitem"]'));
+    }
+    function setOpen(open) {
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menu.hidden = !open;
+    }
+    function close() { setOpen(false); }
+
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var open = btn.getAttribute('aria-expanded') === 'true';
+      closeAll();
+      setOpen(!open);
+    });
+
+    btn.addEventListener('keydown', function (e) {
+      if (e.key === 'ArrowDown' || e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        closeAll();
+        setOpen(true);
+        var list = items();
+        if (list[0]) list[0].focus();
+      } else if (e.key === 'Escape') {
+        close();
+      }
+    });
+
+    menu.addEventListener('keydown', function (e) {
+      var list = items();
+      var i = list.indexOf(document.activeElement);
+      if (e.key === 'Escape') {
+        e.preventDefault();
+        e.stopPropagation();
+        close();
+        btn.focus();
+      } else if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        if (list.length) list[(i + 1 + list.length) % list.length].focus();
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        if (list.length) list[(i - 1 + list.length) % list.length].focus();
+      } else if (e.key === 'Home') {
+        e.preventDefault();
+        if (list[0]) list[0].focus();
+      } else if (e.key === 'End') {
+        e.preventDefault();
+        if (list.length) list[list.length - 1].focus();
+      } else if (e.key === 'Tab') {
+        close();
+      }
+    });
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest || !e.target.closest('.lang-switcher')) closeAll();
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeAll();
+  });
 })();

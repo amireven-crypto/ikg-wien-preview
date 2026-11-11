@@ -8,11 +8,11 @@
 <meta content="Konzept-Demo einer Neugestaltung von ikg-wien.at. Keine offizielle Seite der IKG Wien. Inhalte stammen von der offiziellen Website." name="description"/>
 <meta content="noindex, nofollow" name="robots"/>
 <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
-<link href="css/styles.css?ver=1.8.1" rel="stylesheet"/>
-<link href="css/scroll-reveal.css?ver=1.8.1" rel="stylesheet"/>
-<link href="css/fade-in-up.css?ver=1.8.1" rel="stylesheet"/>
-<link href="css/stagger-list.css?ver=1.8.1" rel="stylesheet"/>
-<link href="css/card-lift-hover.css?ver=1.8.1" rel="stylesheet"/>
+<link href="css/styles.css?ver=1.9.0" rel="stylesheet"/>
+<link href="css/scroll-reveal.css?ver=1.9.0" rel="stylesheet"/>
+<link href="css/fade-in-up.css?ver=1.9.0" rel="stylesheet"/>
+<link href="css/stagger-list.css?ver=1.9.0" rel="stylesheet"/>
+<link href="css/card-lift-hover.css?ver=1.9.0" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
@@ -92,20 +92,12 @@
 <span class="nav-tools">
 <a class="nav-tool" href="search.html">Search</a>
 <a class="nav-tool" href="newsletter.html">Newsletter</a>
-<span class="lang-switch" lang="und">
-<a href="index.html">Deutsch</a>
-<span aria-hidden="true">·</span>
-<a href="en.html">English</a>
-<span aria-hidden="true">·</span>
-<a href="hebrew-landing-page.html">עברית</a>
+
 </span>
-</span>
-<a class="btn btn-primary" href="jetztspenden.html">Spenden</a>
 </nav>
-<div class="header-tools"><div class="text-size" role="group" aria-label="Schriftgröße"><button type="button" class="text-size-btn" data-text-size="down" aria-label="Schrift verkleinern" title="Schrift verkleinern">A−</button><button type="button" class="text-size-btn" data-text-size="up" aria-label="Schrift vergrößern" title="Schrift vergrößern">A+</button></div>
-<button aria-controls="mobile-nav" aria-expanded="false" aria-label="Menü öffnen" class="menu-toggle" type="button">
+<div class="header-end"><div class="lang-switcher"><button type="button" class="lang-switcher-toggle" aria-expanded="false" aria-haspopup="menu" aria-controls="lang-menu" id="lang-switcher-btn" aria-label="Sprache, Deutsch"><img src="img/flags/at.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-code">DE</span><span class="lang-chevron" aria-hidden="true"></span></button><ul class="lang-menu" id="lang-menu" role="menu" hidden="" aria-labelledby="lang-switcher-btn"><li role="none"><a href="language-courses-and-professional-integration.html" hreflang="de" lang="de" role="menuitem" aria-current="page" class="is-current"><img src="img/flags/at.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">Deutsch</span><span class="lang-code-opt">DE</span></a></li><li role="none"><a href="en.html" hreflang="en" lang="en" role="menuitem"><img src="img/flags/gb.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">English</span><span class="lang-code-opt">EN</span></a></li><li role="none"><a href="hebrew-landing-page.html" hreflang="he" lang="he" role="menuitem"><img src="img/flags/il.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">עברית</span><span class="lang-code-opt">HE</span></a></li><li role="none"><a href="ru.html" hreflang="ru" lang="ru" role="menuitem"><img src="img/flags/ru.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">Русский</span><span class="lang-code-opt">RU</span></a></li></ul></div><a class="btn btn-primary header-spenden" href="jetztspenden.html">Spenden</a><div class="header-tools"><div class="text-size" role="group" aria-label="Schriftgröße"><button type="button" class="text-size-btn" data-text-size="down" aria-label="Schrift verkleinern" title="Schrift verkleinern">A−</button><button type="button" class="text-size-btn" data-text-size="up" aria-label="Schrift vergrößern" title="Schrift vergrößern">A+</button></div><button aria-controls="mobile-nav" aria-expanded="false" aria-label="Menü öffnen" class="menu-toggle" type="button">
 <span></span>
-</button></div>
+</button></div></div>
 </div>
 <div class="wrap">
 <nav aria-label="Mobiles Menü" class="nav-mobile" hidden="" id="mobile-nav">
@@ -172,11 +164,7 @@
 <a href="kontakt.html">Kontakt</a>
 <a href="search.html">Search</a>
 <a href="newsletter.html">Newsletter</a>
-<p class="mobile-langs">
-<a href="index.html">Deutsch</a>
-<a href="en.html">English</a>
-<a href="hebrew-landing-page.html">עברית</a>
-</p>
+<nav class="lang-flags" aria-label="Sprache"><a href="language-courses-and-professional-integration.html" hreflang="de" lang="de" aria-current="page" class="is-current"><img src="img/flags/at.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">Deutsch</span></a><a href="en.html" hreflang="en" lang="en"><img src="img/flags/gb.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">English</span></a><a href="hebrew-landing-page.html" hreflang="he" lang="he"><img src="img/flags/il.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">עברית</span></a><a href="ru.html" hreflang="ru" lang="ru"><img src="img/flags/ru.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">Русский</span></a></nav>
 <a class="btn btn-primary" href="jetztspenden.html">Spenden</a>
 </nav>
 </div>
@@ -222,7 +210,7 @@
 </svg>
 </a> </div>
 </div>
-<p class="block paragraph-block" dir="auto">With the war in Ukraine still raging, many Jewish refugees do not know whether they will permanently stay in Austria or whether they will return to their home country. The Jewish Community, through its Jewish vocational training center JBBZ (Jüdisches Berufsbildungszentrum), offers German language courses for adults as well as intensive job training. This initiative paves the way towards independence and self sufficiency in a new environment.  </p><figure class="block image-block -wrap -right -max-50%" dir="auto"><img alt="Img 5905" class="image-block-image" height="520" src="img/official/img_5905-17a1f7fe58bd62c8.jpg" width="800"/><figcaption class="image-block-caption"></figcaption></figure><h2 class="block header-block" dir="auto">Language is the key to everything</h2><p class="block paragraph-block" dir="auto">Since many refugees are well prepared to enter the job market in Austria, language skills are essential for a successful start into the labor market. Also, learning the language in a new country is one of the cornerstones of successful integration and towards navigating a new environment more easily.  </p><p class="block paragraph-block" dir="auto">In order to facilitate German language courses, we cooperate with the Austrian Integration Fund that supports our work.</p><h2 class="block header-block" dir="auto">High quality German courses and job training</h2><p class="block paragraph-block" dir="auto">While every Jewish refugee in Vienna knows that they are part of a proud community, we want to enable them to be part of the broader society as well. This way we decrease dependence on donations in the long run, especially when entering the integration phase for those who want to stay in Vienna. </p><p class="block paragraph-block" dir="auto">For those who need additional job training in order to find employment in Austria the JBBZ offers a variety of courses that help equip Jewish refugees for the job market. <br/></p>
+<p class="block paragraph-block" dir="auto">With the war in Ukraine still raging, many Jewish refugees do not know whether they will permanently stay in Austria or whether they will return to their home country. The Jewish Community, through its Jewish vocational training center JBBZ (Jüdisches Berufsbildungszentrum), offers German language courses for adults as well as intensive job training. This initiative paves the way towards independence and self sufficiency in a new environment.  </p><figure class="block image-block -wrap -right -max-50%" dir="auto"><img alt="Img 5905" class="image-block-image" height="520" src="img/official/img_5905-17a1f7fe58bd62c8.png" width="800"/><figcaption class="image-block-caption"></figcaption></figure><h2 class="block header-block" dir="auto">Language is the key to everything</h2><p class="block paragraph-block" dir="auto">Since many refugees are well prepared to enter the job market in Austria, language skills are essential for a successful start into the labor market. Also, learning the language in a new country is one of the cornerstones of successful integration and towards navigating a new environment more easily.  </p><p class="block paragraph-block" dir="auto">In order to facilitate German language courses, we cooperate with the Austrian Integration Fund that supports our work.</p><h2 class="block header-block" dir="auto">High quality German courses and job training</h2><p class="block paragraph-block" dir="auto">While every Jewish refugee in Vienna knows that they are part of a proud community, we want to enable them to be part of the broader society as well. This way we decrease dependence on donations in the long run, especially when entering the integration phase for those who want to stay in Vienna. </p><p class="block paragraph-block" dir="auto">For those who need additional job training in order to find employment in Austria the JBBZ offers a variety of courses that help equip Jewish refugees for the job market. <br/></p>
 </div>
 </div>
 <div class="container">
@@ -354,9 +342,9 @@
       </p>
 </div>
 </footer>
-<script src="js/scroll-reveal.js?ver=1.8.1"></script>
-<script src="js/fade-in-up.js?ver=1.8.1"></script>
-<script src="js/stagger-list.js?ver=1.8.1"></script>
-<script src="js/site.js?ver=1.8.1"></script>
+<script src="js/scroll-reveal.js?ver=1.9.0"></script>
+<script src="js/fade-in-up.js?ver=1.9.0"></script>
+<script src="js/stagger-list.js?ver=1.9.0"></script>
+<script src="js/site.js?ver=1.9.0"></script>
 </body>
 </html>

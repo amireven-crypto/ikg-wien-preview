@@ -8,11 +8,11 @@
 <meta content="Konzept-Demo einer Neugestaltung von ikg-wien.at. Keine offizielle Seite der IKG Wien. Inhalte stammen von der offiziellen Website." name="description"/>
 <meta content="noindex, nofollow" name="robots"/>
 <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
-<link href="css/styles.css?ver=1.8.1" rel="stylesheet"/>
-<link href="css/scroll-reveal.css?ver=1.8.1" rel="stylesheet"/>
-<link href="css/fade-in-up.css?ver=1.8.1" rel="stylesheet"/>
-<link href="css/stagger-list.css?ver=1.8.1" rel="stylesheet"/>
-<link href="css/card-lift-hover.css?ver=1.8.1" rel="stylesheet"/>
+<link href="css/styles.css?ver=1.9.0" rel="stylesheet"/>
+<link href="css/scroll-reveal.css?ver=1.9.0" rel="stylesheet"/>
+<link href="css/fade-in-up.css?ver=1.9.0" rel="stylesheet"/>
+<link href="css/stagger-list.css?ver=1.9.0" rel="stylesheet"/>
+<link href="css/card-lift-hover.css?ver=1.9.0" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
@@ -92,20 +92,12 @@
 <span class="nav-tools">
 <a class="nav-tool" href="search.html">Search</a>
 <a class="nav-tool" href="newsletter.html">Newsletter</a>
-<span class="lang-switch" lang="und">
-<a href="index.html">Deutsch</a>
-<span aria-hidden="true">·</span>
-<a href="en.html">English</a>
-<span aria-hidden="true">·</span>
-<a href="hebrew-landing-page.html">עברית</a>
+
 </span>
-</span>
-<a class="btn btn-primary" href="jetztspenden.html">Spenden</a>
 </nav>
-<div class="header-tools"><div aria-label="Schriftgröße" class="text-size" role="group"><button aria-label="Schrift verkleinern" class="text-size-btn" data-text-size="down" title="Schrift verkleinern" type="button">A−</button><button aria-label="Schrift vergrößern" class="text-size-btn" data-text-size="up" title="Schrift vergrößern" type="button">A+</button></div>
-<button aria-controls="mobile-nav" aria-expanded="false" aria-label="Menü öffnen" class="menu-toggle" type="button">
+<div class="header-end"><div class="lang-switcher"><button type="button" class="lang-switcher-toggle" aria-expanded="false" aria-haspopup="menu" aria-controls="lang-menu" id="lang-switcher-btn" aria-label="Sprache, Deutsch"><img src="img/flags/at.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-code">DE</span><span class="lang-chevron" aria-hidden="true"></span></button><ul class="lang-menu" id="lang-menu" role="menu" hidden="" aria-labelledby="lang-switcher-btn"><li role="none"><a href="rabbinat-de.html" hreflang="de" lang="de" role="menuitem" aria-current="page" class="is-current"><img src="img/flags/at.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">Deutsch</span><span class="lang-code-opt">DE</span></a></li><li role="none"><a href="en/rabbinate.html" hreflang="en" lang="en" role="menuitem"><img src="img/flags/gb.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">English</span><span class="lang-code-opt">EN</span></a></li><li role="none"><a href="religion-ikg-he.html" hreflang="he" lang="he" role="menuitem"><img src="img/flags/il.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">עברית</span><span class="lang-code-opt">HE</span></a></li><li role="none"><a href="ru.html" hreflang="ru" lang="ru" role="menuitem"><img src="img/flags/ru.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">Русский</span><span class="lang-code-opt">RU</span></a></li></ul></div><a class="btn btn-primary header-spenden" href="jetztspenden.html">Spenden</a><div class="header-tools"><div aria-label="Schriftgröße" class="text-size" role="group"><button aria-label="Schrift verkleinern" class="text-size-btn" data-text-size="down" title="Schrift verkleinern" type="button">A−</button><button aria-label="Schrift vergrößern" class="text-size-btn" data-text-size="up" title="Schrift vergrößern" type="button">A+</button></div><button aria-controls="mobile-nav" aria-expanded="false" aria-label="Menü öffnen" class="menu-toggle" type="button">
 <span></span>
-</button></div>
+</button></div></div>
 </div>
 <div class="wrap">
 <nav aria-label="Mobiles Menü" class="nav-mobile" hidden="" id="mobile-nav">
@@ -172,11 +164,7 @@
 <a href="kontakt.html">Kontakt</a>
 <a href="search.html">Search</a>
 <a href="newsletter.html">Newsletter</a>
-<p class="mobile-langs">
-<a href="index.html">Deutsch</a>
-<a href="en.html">English</a>
-<a href="hebrew-landing-page.html">עברית</a>
-</p>
+<nav class="lang-flags" aria-label="Sprache"><a href="rabbinat-de.html" hreflang="de" lang="de" aria-current="page" class="is-current"><img src="img/flags/at.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">Deutsch</span></a><a href="en/rabbinate.html" hreflang="en" lang="en"><img src="img/flags/gb.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">English</span></a><a href="religion-ikg-he.html" hreflang="he" lang="he"><img src="img/flags/il.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">עברית</span></a><a href="ru.html" hreflang="ru" lang="ru"><img src="img/flags/ru.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">Русский</span></a></nav>
 <a class="btn btn-primary" href="jetztspenden.html">Spenden</a>
 </nav>
 </div>
@@ -239,7 +227,7 @@
 </button>
 <div class="swiper-wrapper">
 <a class="swiper-slide md:px-24 md:flex items-center" href="nachrichten/kantorenkonzert-informationen-zu-getrennten-sitzbereich-fuer-frauen-und-maenner.html">
-<figure class="official-fig"><img alt="2026 11 25 kantorenkonzert 7 beitragsbild website" class="md:hidden mb-4" height="300" src="img/official/2026_11_25_kantorenkonzert-7-beitragsbild-website-7270a06b2fc5ee62.jpg" width="593"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<figure class="official-fig"><img alt="2026 11 25 kantorenkonzert 7 beitragsbild website" class="md:hidden mb-4" height="300" src="img/official/2026_11_25_kantorenkonzert-7-beitragsbild-website-7270a06b2fc5ee62.png" width="593"/><figcaption>Bild: IKG Wien</figcaption></figure>
 <div class="bg-white rounded-sm md:p-8">
 <div class="flex items-center">
 <div class="px-1 py-1 mr-2 bg-red"></div>
@@ -268,7 +256,7 @@
 </div>
 </div></a>
 <a class="swiper-slide md:px-24 md:flex items-center" href="judentum-verstehen.html">
-<figure class="official-fig"><img alt="2024 06 04 shiur hofmeister beitragsbild website" class="md:hidden mb-4" height="300" src="img/official/2024_06_04_shiur_hofmeister_beitragsbild-website-8a334d907fc5f62e.jpg" width="593"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<figure class="official-fig"><img alt="2024 06 04 shiur hofmeister beitragsbild website" class="md:hidden mb-4" height="300" src="img/official/2024_06_04_shiur_hofmeister_beitragsbild-website-8a334d907fc5f62e.png" width="593"/><figcaption>Bild: IKG Wien</figcaption></figure>
 <div class="bg-white rounded-sm md:p-8">
 <div class="flex items-center">
 <div class="px-1 py-1 mr-2 bg-red"></div>
@@ -326,7 +314,7 @@
 </div>
 </div></a>
 <a class="swiper-slide md:px-24 md:flex items-center" href="https://www.wina-magazin.at/mischpachotikg/" rel="noopener noreferrer" target="_blank" title="Öffnet in neuem Tab">
-<figure class="official-fig"><img alt="Bildschirmfoto 2026 08 18 um 10.09.34" class="md:hidden mb-4" height="300" src="img/official/bildschirmfoto-2026-08-18-um-10-09-34-77b10df82f74c5b3.jpg" width="593"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<figure class="official-fig"><img alt="Bildschirmfoto 2026 08 18 um 10.09.34" class="md:hidden mb-4" height="300" src="img/official/bildschirmfoto-2026-08-18-um-10-09-34-77b10df82f74c5b3.png" width="593"/><figcaption>Bild: IKG Wien</figcaption></figure>
 <div class="bg-white rounded-sm md:p-8">
 <div class="flex items-center">
 <div class="px-1 py-1 mr-2 bg-red"></div>
@@ -386,7 +374,7 @@ Oberrabbiner
 </div>
 </div></a>
 <a class="swiper-slide md:px-24 md:flex items-center" href="nachrichten/der-wiener-eruv.html">
-<figure class="official-fig"><img alt="Logo eiriv" class="md:hidden mb-4" height="300" src="img/official/logoeiriv-73f178070e57a21d.jpg" width="593"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<figure class="official-fig"><img alt="Logo eiriv" class="md:hidden mb-4" height="300" src="img/official/logoeiriv-73f178070e57a21d.png" width="593"/><figcaption>Bild: IKG Wien</figcaption></figure>
 <div class="bg-white rounded-sm md:p-8">
 <div class="flex items-center">
 <div class="px-1 py-1 mr-2 bg-red"></div>
@@ -495,7 +483,7 @@ Oberrabbiner
 <a class="rabbis-block--rabbi" href="rabbinat/rabbiner/oberrabbiner-yaron-nisenholz.html">
 <div class="grid grid-cols-1 gap-4 lg:grid-cols-7 xs:grid-cols-8 sm:gap-9 overflow-hidden" data-aos="fade-right" data-aos-duration="1500">
 <div class="lg:col-span-1 xs:col-span-2">
-<figure class="official-fig"><img alt="Produkt galerie platzhalter 300x222" class="xs:w-full" height="240" src="img/official/produkt-galerie-platzhalter-300x222-ca0a772381ad5bf2.jpg" width="180"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<figure class="official-fig"><img alt="Produkt galerie platzhalter 300x222" class="xs:w-full" height="240" src="img/official/produkt-galerie-platzhalter-300x222-ca0a772381ad5bf2.png" width="180"/><figcaption>Bild: IKG Wien</figcaption></figure>
 </div>
 <div class="space-y-2 xs:col-span-5 lg:col-start-2 xs:col-start-3 sm:space-y-4">
 <div class="text-xl font-bold text-black xl:text-4xl lg:text-3xl md:text-2xl">
@@ -620,7 +608,7 @@ Oberrabbiner
 <div class="home-project flex flex-col xs:flex-row space-y-8 xs:space-y-0 xs:space-x-8 border border-light-indigo rounded-sm h-full overflow-hidden" data-aos="fade-left" data-aos-duration="1500">
 <div class="xs:w-1/2">
 <a href="judaism-in-a-drop.html">
-<figure class="official-fig"><img alt="87caa5d9 7a0a 5f20 08eb adccf5da31cc" class="w-full h-full object-cover" height="342" src="img/official/87caa5d9-7a0a-5f20-08eb-adccf5da31cc-7cc04b01e830a93a.jpg" width="342"/><figcaption>Bild: IKG Wien</figcaption></figure>
+<figure class="official-fig"><img alt="87caa5d9 7a0a 5f20 08eb adccf5da31cc" class="w-full h-full object-cover" height="342" src="img/official/87caa5d9-7a0a-5f20-08eb-adccf5da31cc-7cc04b01e830a93a.png" width="342"/><figcaption>Bild: IKG Wien</figcaption></figure>
 </a> </div>
 <div class="flex flex-col xs:w-1/2 pl-7 xs:pl-0 pr-7 pt-7 pb-6">
 <a href="judaism-in-a-drop.html">
@@ -899,9 +887,9 @@ BAWAATWW
       </p>
 </div>
 </footer>
-<script src="js/scroll-reveal.js?ver=1.8.1"></script>
-<script src="js/fade-in-up.js?ver=1.8.1"></script>
-<script src="js/stagger-list.js?ver=1.8.1"></script>
-<script src="js/site.js?ver=1.8.1"></script>
+<script src="js/scroll-reveal.js?ver=1.9.0"></script>
+<script src="js/fade-in-up.js?ver=1.9.0"></script>
+<script src="js/stagger-list.js?ver=1.9.0"></script>
+<script src="js/site.js?ver=1.9.0"></script>
 </body>
 </html>

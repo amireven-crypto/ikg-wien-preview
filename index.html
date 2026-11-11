@@ -8,11 +8,11 @@
 <meta content="Konzept-Demo einer Neugestaltung von ikg-wien.at. Keine offizielle Seite der IKG Wien. Inhalte stammen von der offiziellen Website." name="description"/>
 <meta content="noindex, nofollow" name="robots"/>
 <link href="favicon.svg" rel="icon" type="image/svg+xml"/>
-<link href="css/styles.css?ver=1.8.1" rel="stylesheet"/>
-<link href="css/scroll-reveal.css?ver=1.8.1" rel="stylesheet"/>
-<link href="css/fade-in-up.css?ver=1.8.1" rel="stylesheet"/>
-<link href="css/stagger-list.css?ver=1.8.1" rel="stylesheet"/>
-<link href="css/card-lift-hover.css?ver=1.8.1" rel="stylesheet"/>
+<link href="css/styles.css?ver=1.9.0" rel="stylesheet"/>
+<link href="css/scroll-reveal.css?ver=1.9.0" rel="stylesheet"/>
+<link href="css/fade-in-up.css?ver=1.9.0" rel="stylesheet"/>
+<link href="css/stagger-list.css?ver=1.9.0" rel="stylesheet"/>
+<link href="css/card-lift-hover.css?ver=1.9.0" rel="stylesheet"/>
 </head>
 <body>
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
@@ -92,20 +92,12 @@
 <span class="nav-tools">
 <a class="nav-tool" href="search.html">Search</a>
 <a class="nav-tool" href="newsletter.html">Newsletter</a>
-<span class="lang-switch" lang="und">
-<a href="index.html">Deutsch</a>
-<span aria-hidden="true">·</span>
-<a href="en.html">English</a>
-<span aria-hidden="true">·</span>
-<a href="hebrew-landing-page.html">עברית</a>
+
 </span>
-</span>
-<a class="btn btn-primary" href="jetztspenden.html">Spenden</a>
 </nav>
-<div class="header-tools"><div aria-label="Schriftgröße" class="text-size" role="group"><button aria-label="Schrift verkleinern" class="text-size-btn" data-text-size="down" title="Schrift verkleinern" type="button">A−</button><button aria-label="Schrift vergrößern" class="text-size-btn" data-text-size="up" title="Schrift vergrößern" type="button">A+</button></div>
-<button aria-controls="mobile-nav" aria-expanded="false" aria-label="Menü öffnen" class="menu-toggle" type="button">
+<div class="header-end"><div class="lang-switcher"><button type="button" class="lang-switcher-toggle" aria-expanded="false" aria-haspopup="menu" aria-controls="lang-menu" id="lang-switcher-btn" aria-label="Sprache, Deutsch"><img src="img/flags/at.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-code">DE</span><span class="lang-chevron" aria-hidden="true"></span></button><ul class="lang-menu" id="lang-menu" role="menu" hidden="" aria-labelledby="lang-switcher-btn"><li role="none"><a href="index.html" hreflang="de" lang="de" role="menuitem" aria-current="page" class="is-current"><img src="img/flags/at.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">Deutsch</span><span class="lang-code-opt">DE</span></a></li><li role="none"><a href="en.html" hreflang="en" lang="en" role="menuitem"><img src="img/flags/gb.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">English</span><span class="lang-code-opt">EN</span></a></li><li role="none"><a href="hebrew-landing-page.html" hreflang="he" lang="he" role="menuitem"><img src="img/flags/il.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">עברית</span><span class="lang-code-opt">HE</span></a></li><li role="none"><a href="ru.html" hreflang="ru" lang="ru" role="menuitem"><img src="img/flags/ru.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">Русский</span><span class="lang-code-opt">RU</span></a></li></ul></div><a class="btn btn-primary header-spenden" href="jetztspenden.html">Spenden</a><div class="header-tools"><div aria-label="Schriftgröße" class="text-size" role="group"><button aria-label="Schrift verkleinern" class="text-size-btn" data-text-size="down" title="Schrift verkleinern" type="button">A−</button><button aria-label="Schrift vergrößern" class="text-size-btn" data-text-size="up" title="Schrift vergrößern" type="button">A+</button></div><button aria-controls="mobile-nav" aria-expanded="false" aria-label="Menü öffnen" class="menu-toggle" type="button">
 <span></span>
-</button></div>
+</button></div></div>
 </div>
 <div class="wrap">
 <nav aria-label="Mobiles Menü" class="nav-mobile" hidden="" id="mobile-nav">
@@ -172,11 +164,7 @@
 <a href="kontakt.html">Kontakt</a>
 <a href="search.html">Search</a>
 <a href="newsletter.html">Newsletter</a>
-<p class="mobile-langs">
-<a href="index.html">Deutsch</a>
-<a href="en.html">English</a>
-<a href="hebrew-landing-page.html">עברית</a>
-</p>
+<nav class="lang-flags" aria-label="Sprache"><a href="index.html" hreflang="de" lang="de" aria-current="page" class="is-current"><img src="img/flags/at.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">Deutsch</span></a><a href="en.html" hreflang="en" lang="en"><img src="img/flags/gb.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">English</span></a><a href="hebrew-landing-page.html" hreflang="he" lang="he"><img src="img/flags/il.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">עברית</span></a><a href="ru.html" hreflang="ru" lang="ru"><img src="img/flags/ru.svg" alt="" width="22" height="16" class="lang-flag"/><span class="lang-name">Русский</span></a></nav>
 <a class="btn btn-primary" href="jetztspenden.html">Spenden</a>
 </nav>
 </div>
@@ -184,15 +172,7 @@
 <main id="inhalt">
 <section aria-labelledby="hero-title" class="hero"><div class="wrap"><div class="hero-frame"><div class="hero-media"><img alt="Innenraum des Wiener Stadttempels mit blauer Sternenkuppel, Säulen und Toraschrein. Historische Aufnahme vor der Restaurierung 2025/26." class="hero-img" height="1112" src="img/stadttempel-innen.jpg" width="1920"/><video autoplay="" class="hero-video" id="hero-video" loop="" muted="" playsinline="" poster="img/stadttempel-innen.jpg" preload="metadata">
 <source src="video/2026_09_16_headeralg-1280.mp4" type="video/mp4"/>
-</video><div aria-hidden="true" class="hero-shade"></div><div class="hero-overlay"><h1 data-fade="" id="hero-title">Willkommen in der jüdischen Gemeinde Wiens</h1></div><button aria-controls="hero-video" aria-label="Video pausieren" aria-pressed="true" class="hero-media-toggle" type="button">
-<svg aria-hidden="true" class="icon-pause" focusable="false" height="18" viewbox="0 0 18 18" width="18">
-<rect fill="currentColor" height="12" rx="0.5" width="3.5" x="4" y="3"></rect>
-<rect fill="currentColor" height="12" rx="0.5" width="3.5" x="10.5" y="3"></rect>
-</svg>
-<svg aria-hidden="true" class="icon-play" focusable="false" height="18" hidden="" viewbox="0 0 18 18" width="18">
-<path d="M5.5 3.2v11.6L14.8 9 5.5 3.2z" fill="currentColor"></path>
-</svg>
-</button></div></div><p class="hero-caption">Hintergrundvideo von der offiziellen Website der IKG Wien, ikg-wien.at. Als Standbild: Historische Aufnahme des Stadttempels, vor der Restaurierung und Sanierung 2025/26. Foto: Bic, <a class="u-color-inherit" href="https://creativecommons.org/licenses/by-sa/4.0" rel="noopener noreferrer" target="_blank" title="Öffnet in neuem Tab">CC BY-SA 4.0</a>, über Wikimedia Commons.</p><div class="hero-intro">
+</video><div aria-hidden="true" class="hero-shade"></div><div class="hero-overlay"><h1 data-fade="" id="hero-title">Willkommen in der jüdischen Gemeinde Wiens</h1></div></div></div><p class="hero-caption">Hintergrundvideo von der offiziellen Website der IKG Wien, ikg-wien.at. Als Standbild: Historische Aufnahme des Stadttempels, vor der Restaurierung und Sanierung 2025/26. Foto: Bic, <a class="u-color-inherit" href="https://creativecommons.org/licenses/by-sa/4.0" rel="noopener noreferrer" target="_blank" title="Öffnet in neuem Tab">CC BY-SA 4.0</a>, über Wikimedia Commons.</p><div class="hero-intro">
 <p class="lead" data-fade="">Die kleine Wiener jüdische Gemeinde zählt heute zu den lebendigsten im deutschsprachigen Raum. Die Israelitische Kultusgemeinde (IKG) Wien hat knapp 8.000 Mitglieder, insgesamt leben etwa 12.000 Jüdinnen und Juden in Wien.</p>
 <div class="hero-actions" data-fade="">
 <a class="btn btn-primary" href="#aktuelles">Aktuelles</a>
@@ -261,7 +241,7 @@
 <p>Ein gelungener und inspirierender Buchabend im ZiB: Die Bestsellerautorin Mirna Funk stellte am 22. Oktober in Baden ihren aktuellen Roman „Balagan“ vor.</p>
 <span class="more">Weiterlesen</span>
 </div></a>
-<a class="news-card lift-card" data-reveal="" href="nachrichten/schuluebergreifende-fortbildung-fuer-mitarbeiter-juedischer-schulen.html"><img alt="Bildschirmfoto 2026 10 20 um 10.56.29" class="news-card-img" height="500" src="img/official/bildschirmfoto-2026-10-20-um-10-56-29-5e226ca434a1c70a.jpg" width="800"/><div class="news-card-body">
+<a class="news-card lift-card" data-reveal="" href="nachrichten/schuluebergreifende-fortbildung-fuer-mitarbeiter-juedischer-schulen.html"><img alt="Bildschirmfoto 2026 10 20 um 10.56.29" class="news-card-img" height="500" src="img/official/bildschirmfoto-2026-10-20-um-10-56-29-5e226ca434a1c70a.png" width="800"/><div class="news-card-body">
 <p class="news-meta">News · 20.10.2026</p>
 <h3>Schulübergreifende Fortbildung für Mitarbeiter jüdischer Schulen</h3>
 <p>Die Bildungskommission organisierte auch heuer wieder eine schulübergreifende LehrerInnenfortbildung.</p>
@@ -678,9 +658,9 @@
       </p>
 </div>
 </footer>
-<script src="js/scroll-reveal.js?ver=1.8.1"></script>
-<script src="js/fade-in-up.js?ver=1.8.1"></script>
-<script src="js/stagger-list.js?ver=1.8.1"></script>
-<script src="js/site.js?ver=1.8.1"></script>
+<script src="js/scroll-reveal.js?ver=1.9.0"></script>
+<script src="js/fade-in-up.js?ver=1.9.0"></script>
+<script src="js/stagger-list.js?ver=1.9.0"></script>
+<script src="js/site.js?ver=1.9.0"></script>
 </body>
 </html>
