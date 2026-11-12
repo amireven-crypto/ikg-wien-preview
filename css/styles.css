@@ -2539,19 +2539,10 @@ section { padding: 72px 0; }
   font-display: swap;
 }
 
-html[lang="he"],
-html[dir="rtl"] {
-  font-family: "Heebo", "Noto Sans", Verdana, "Helvetica Neue", Arial, sans-serif;
-}
-html[lang="he"] body,
-html[dir="rtl"] body,
-html[lang="he"] h1,
-html[lang="he"] h2,
-html[lang="he"] h3,
-html[dir="rtl"] h1,
-html[dir="rtl"] h2,
-html[dir="rtl"] h3 {
-  font-family: "Heebo", "Noto Sans", Verdana, "Helvetica Neue", Arial, sans-serif;
+/* Hebrew: keep the exact same fonts as German; Heebo only supplies the Hebrew glyphs Noto Sans lacks. */
+html[lang="he"] {
+  --font-display: "Noto Sans", "Heebo", Verdana, "Helvetica Neue", Arial, sans-serif;
+  --font-text: "Noto Sans", "Heebo", Verdana, "Helvetica Neue", Arial, sans-serif;
 }
 
 .header-end {
@@ -2649,10 +2640,6 @@ html[dir="rtl"] h3 {
   color: var(--color-primary);
   box-shadow: inset 3px 0 0 var(--color-primary);
 }
-html[dir="rtl"] .lang-menu a.is-current,
-html[dir="rtl"] .lang-menu a[aria-current="page"] {
-  box-shadow: inset -3px 0 0 var(--color-primary);
-}
 .lang-code-opt {
   margin-inline-start: auto;
   font-size: 12px;
@@ -2698,24 +2685,17 @@ html[dir="rtl"] .lang-menu a[aria-current="page"] {
   body.menu-open .lang-menu { display: none !important; }
 }
 
-/* Hebrew / RTL layout */
-html[dir="rtl"] { text-align: right; }
-html[dir="rtl"] .hero-overlay,
-html[dir="rtl"] .hero-overlay h1,
-html[dir="rtl"] .hero-intro,
-html[dir="rtl"] .hero-caption,
-html[dir="rtl"] .section-head,
-html[dir="rtl"] .news-card-body,
-html[dir="rtl"] .page-content,
-html[dir="rtl"] .page-main,
-html[dir="rtl"] .page-breadcrumb {
-  text-align: right;
-}
-html[dir="rtl"] .hero-actions,
-html[dir="rtl"] .stats,
-html[dir="rtl"] .event-row {
+/* Hebrew / RTL: identical layout to German (header, grids, rows, buttons, hero stay in place).
+   Only text blocks (none of which are flex/grid containers) run and align right-to-left. */
+html[dir="rtl"] body { direction: ltr; }
+html[dir="rtl"] :is(h1, h2, h3, h4, h5, h6, p, li, dt, dd, blockquote, figcaption, label, legend, td, th, address, .demo-banner, .hero-caption, .page-breadcrumb, .wordmark-kicker) {
   direction: rtl;
 }
+html[dir="rtl"] :is(a, span, strong, em, time) { unicode-bidi: plaintext; }
+html[dir="rtl"] :is(a[href^="tel:"], a[href^="mailto:"]) { direction: ltr; unicode-bidi: isolate; }
+
+/* Long compound words (e.g. German event titles) wrap instead of overflowing on phones. */
+main :is(h1, h2, h3, h4) { overflow-wrap: break-word; hyphens: auto; }
 
 /* Demo Russian translation notice */
 .demo-translation-note {
@@ -2834,4 +2814,9 @@ html[dir="rtl"] .event-row {
   .hero.hero-fullbleed .hero-video:not(.is-playing) {
     visibility: hidden;
   }
+}
+
+/* Hebrew: width-limited text boxes shrink to their text so they stay exactly where the German ones are. */
+html[dir="rtl"] :is(.section-head, .hero-overlay h1, .hero-overlay .lead, .hero h1, .hero .lead) {
+  width: fit-content;
 }

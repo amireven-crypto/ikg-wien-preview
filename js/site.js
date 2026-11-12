@@ -5,9 +5,17 @@
   var panel = document.getElementById('mobile-nav');
   if (!toggle || !panel) return;
 
+  var pageLang = (document.documentElement.getAttribute('lang') || 'de').slice(0, 2).toLowerCase();
+  var menuLabels = {
+    de: ['Menü öffnen', 'Menü schließen'],
+    en: ['Open menu', 'Close menu'],
+    he: ['פתיחת תפריט', 'סגירת תפריט'],
+    ru: ['Открыть меню', 'Закрыть меню']
+  }[pageLang] || ['Menü öffnen', 'Menü schließen'];
+
   function setOpen(open) {
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    toggle.setAttribute('aria-label', open ? 'Menü schließen' : 'Menü öffnen');
+    toggle.setAttribute('aria-label', open ? menuLabels[1] : menuLabels[0]);
     panel.classList.toggle('is-open', open);
     panel.hidden = !open;
     document.body.classList.toggle('menu-open', open);
@@ -170,7 +178,9 @@
       e.preventDefault();
       e.stopPropagation();
       var n = f.querySelector(".demo-form-note");
-      if (n) n.textContent = "Demo – keine Daten werden gesendet";
+      var fl = (document.documentElement.getAttribute("lang") || "de").slice(0, 2);
+      var msg = { en: "Demo – no data is sent", he: "הדגמה – לא נשלחים נתונים", ru: "Демо – данные не отправляются" }[fl] || "Demo – keine Daten werden gesendet";
+      if (n) n.textContent = msg;
     });
   });
 })();
