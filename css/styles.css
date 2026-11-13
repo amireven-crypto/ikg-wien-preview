@@ -3011,3 +3011,8 @@ img.is-broken { display: none !important; }
   svg [fill="#101022"], svg [fill="black"] { fill: var(--color-text); }
   .demo-form input, .demo-form textarea, .demo-form select { background: var(--bg-soft); color: var(--color-text); border-color: #4A4E66; }
 }
+
+/* Legal pages exist in German only: note shown on EN/HE/RU pages */
+.legal-de-note{font-size:.8125rem;line-height:1.5;opacity:.85}
+p.legal-de-note{margin:.5rem 0 0}
+.site-footer p.legal-de-note{margin:.75rem 0 0}
