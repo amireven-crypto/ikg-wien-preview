@@ -1,6 +1,12 @@
 # DE (normalized) -> (EN, HE, RU). Strings not listed stay as in the German original
 # (proper names, phone numbers, IBANs, addresses, dates).
 T = [
+("Suche","Search","חיפוש","Поиск"),
+("Führungen","Guided Tours","סיורים מודרכים","Экскурсии"),
+("Presse","Press Room","חדר עיתונות","Пресс-центр"),
+("Video anhalten","Pause video","עצירת הווידאו","Остановить видео"),
+("Video abspielen","Play video","הפעלת הווידאו","Воспроизвести видео"),
+("Hintergrundvideo anhalten oder abspielen","Pause or play the background video","עצירה או הפעלה של וידאו הרקע","Остановить или воспроизвести фоновое видео"),
 ("Israelitische Kultusgemeinde Wien – Konzept-Demo von PIXELPOP",
  "Jewish Community of Vienna – concept demo by PIXELPOP",
  "הקהילה היהודית של וינה – הדגמת קונספט של PIXELPOP",

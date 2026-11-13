@@ -22,9 +22,9 @@ LANG = {
              orig=None, orig_text=None, home_fallback='ru.html'),
 }
 BANNER = {
-  'en': "Concept demo by PIXELPOP – not an official IKG Wien page. Demo translation (Demo-Übersetzung). Official website: ikg-wien.at",
-  'he': "הדגמת קונספט של PIXELPOP – אינו אתר רשמי של IKG Wien. תרגום הדגמה (Demo-Übersetzung). לאתר הרשמי: ikg-wien.at",
-  'ru': "Концепт-демо PIXELPOP – не официальная страница IKG Wien. Демо-перевод (Demo-Übersetzung). Официальный сайт: ikg-wien.at",
+  'en': "Concept demo by PIXELPOP · not an official IKG Wien page · demo translation ·",
+  'he': "הדגמת קונספט של PIXELPOP · אינו אתר רשמי של IKG Wien · תרגום הדגמה ·",
+  'ru': "Концепт-демо PIXELPOP · не официальный сайт IKG Wien · демо-перевод ·",
 }
 HOME_FILES = {'de': 'index.html', 'en': 'en.html', 'he': 'hebrew-landing-page.html', 'ru': 'ru.html'}
 
@@ -33,7 +33,7 @@ src = open(os.path.join(root, 'index.html'), encoding='utf-8').read()
 def build(lang):
     cfg = LANG[lang]
     table = tr_home.table(lang)
-    table["Konzept-Demo von PIXELPOP – keine offizielle Seite der IKG Wien. Zur offiziellen Website: ikg-wien.at"] = BANNER[lang]
+    table["Konzept-Demo von PIXELPOP · keine offizielle Seite der IKG Wien ·"] = BANNER[lang]
     if lang == 'he':
         table['und'] = 'וכן'
     s = BeautifulSoup(src, 'html.parser')

@@ -90,16 +90,46 @@
 })();
 
 
-/* Hero background video: reduced-motion only (no visible pause/play control). */
+/* Hero background video: loads after the page, small file on phones,
+   visible pause/play control (remembered), stops after two loops,
+   never plays under reduced motion or Save-Data. */
 (function () {
   'use strict';
   var video = document.getElementById('hero-video');
   if (!video) return;
+  var btn = document.getElementById('hero-pause');
+  var KEY = 'ikg-demo-hero-video';
+  var MAX_LOOPS = 2;
+  var loops = 0;
+  var loaded = false;
 
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
+  var small = window.matchMedia('(max-width: 600px)');
+  var saveData = navigator.connection && navigator.connection.saveData;
+
+  function userPaused() {
+    try { return localStorage.getItem(KEY) === 'paused'; } catch (e) { return false; }
+  }
+  function remember(paused) {
+    try {
+      if (paused) localStorage.setItem(KEY, 'paused');
+      else localStorage.removeItem(KEY);
+    } catch (e) {}
+  }
+
+  function setButton(playing) {
+    if (!btn) return;
+    btn.setAttribute('aria-pressed', playing ? 'false' : 'true');
+    var labels = btn.querySelectorAll('.hero-pause-label');
+    for (var i = 0; i < labels.length; i++) {
+      var isPause = labels[i].classList.contains('is-pause');
+      labels[i].hidden = playing ? !isPause : isPause;
+    }
+  }
 
   function setPlaying(play) {
     if (play) {
+      if (!loaded) return load(true);
       video.classList.add('is-playing');
       video.classList.remove('is-paused');
       var attempt = video.play();
@@ -111,17 +141,81 @@
       video.classList.remove('is-playing');
       video.classList.add('is-paused');
     }
+    setButton(play);
+  }
+
+  function load(autoplay) {
+    var src = small.matches ? video.getAttribute('data-src-small') : video.getAttribute('data-src-large');
+    if (!src) return;
+    loaded = true;
+    video.preload = 'auto';
+    video.src = src;
+    video.addEventListener('loadeddata', function () { if (autoplay) setPlaying(true); }, { once: true });
+    video.load();
+  }
+
+  video.addEventListener('ended', function () {
+    loops += 1;
+    if (loops < MAX_LOOPS) {
+      video.currentTime = 0;
+      video.play();
+    } else {
+      setPlaying(false);
+    }
+  });
+
+  if (btn) {
+    btn.hidden = false;
+    btn.addEventListener('click', function () {
+      var playing = video.classList.contains('is-playing') && !video.paused;
+      if (playing) {
+        remember(true);
+        setPlaying(false);
+      } else {
+        remember(false);
+        loops = 0;
+        setPlaying(true);
+      }
+    });
+  }
+
+  function shouldAutoplay() {
+    return !reduce.matches && !saveData && !userPaused();
+  }
+
+  function start() {
+    if (shouldAutoplay()) load(true);
+    else setPlaying(false);
   }
 
   function applyMotionPref() {
-    setPlaying(!reduce.matches);
+    if (reduce.matches) setPlaying(false);
   }
-
   if (reduce.addEventListener) reduce.addEventListener('change', applyMotionPref);
   else if (reduce.addListener) reduce.addListener(applyMotionPref);
 
-  if (video.readyState >= 2) applyMotionPref();
-  else video.addEventListener('loadeddata', applyMotionPref, { once: true });
+  setButton(false);
+  function later() {
+    if (window.requestIdleCallback) window.requestIdleCallback(start, { timeout: 1500 });
+    else setTimeout(start, 200);
+  }
+  if (document.readyState === 'complete') later();
+  else window.addEventListener('load', later, { once: true });
+})();
+
+
+/* Broken images collapse gracefully instead of showing a broken icon. */
+(function () {
+  'use strict';
+  function mark(img) { img.classList.add('is-broken'); }
+  document.addEventListener('error', function (e) {
+    var t = e.target;
+    if (t && t.tagName === 'IMG') mark(t);
+  }, true);
+  var imgs = document.images;
+  for (var i = 0; i < imgs.length; i++) {
+    if (imgs[i].complete && imgs[i].naturalWidth === 0 && imgs[i].getAttribute('src')) mark(imgs[i]);
+  }
 })();
 
 
