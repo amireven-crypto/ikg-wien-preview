@@ -183,6 +183,15 @@
       if (n) n.textContent = msg;
     });
   });
+
+
+  /* Open external tabs safely (noopener) */
+  document.querySelectorAll('a[target="_blank"]').forEach(function (a) {
+    var rel = (a.getAttribute("rel") || "").split(/\s+/).filter(Boolean);
+    if (rel.indexOf("noopener") === -1) rel.push("noopener");
+    if (rel.indexOf("noreferrer") === -1) rel.push("noreferrer");
+    a.setAttribute("rel", rel.join(" "));
+  });
 })();
 
 

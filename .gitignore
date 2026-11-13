@@ -1,0 +1,11 @@
+.env
+.env.*
+*.pem
+id_rsa
+id_rsa.pub
+credentials.json
+secrets.json
+*.sql
+*.bak
+npm-debug.log
+debug.log
