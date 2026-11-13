@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/><meta content="default-src 'self'; base-uri 'self'; object-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; media-src 'self'; connect-src 'none'; form-action 'none'; frame-src 'none'; worker-src 'none'; upgrade-insecure-requests" http-equiv="Content-Security-Policy"/><meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="light dark" name="color-scheme"/><meta content="#1E2463" media="(prefers-color-scheme: light)" name="theme-color"/><meta content="#1E2463" media="(prefers-color-scheme: dark)" name="theme-color"/>
+<title>События – концепт-демо PIXELPOP</title>
+<meta content="Концепт-демо редизайна ikg-wien.at. Не официальная страница IKG Wien. Содержание взято с официального сайта; демо-перевод." name="description"/>
+<meta content="noindex, nofollow" name="robots"/>
+<link href="../favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../css/styles.css?ver=1.9.5" rel="stylesheet"/>
+<link href="../css/scroll-reveal.css?ver=1.9.3" rel="stylesheet"/>
+<link href="../css/fade-in-up.css?ver=1.9.3" rel="stylesheet"/>
+<link href="../css/stagger-list.css?ver=1.9.3" rel="stylesheet"/>
+<link href="../css/card-lift-hover.css?ver=1.9.3" rel="stylesheet"/>
+</head>
+<body>
+<a class="skip" href="#inhalt">Перейти к содержанию</a>
+<div class="demo-banner">Концепт-демо PIXELPOP · не официальный сайт IKG Wien · демо-перевод · <span class="nobr">ikg-wien.at</span></div>
+<header class="site-header">
+<div class="wrap header-inner">
+<a class="wordmark" href="../ru.html" id="top">
+<span class="wordmark-kicker">Еврейская община</span>
+<span class="wordmark-name"><span class="wm-ikg">IKG</span> <span class="wm-wien">Wien</span></span>
+</a>
+<nav aria-label="Основная навигация" class="nav-desktop">
+<div class="nav-group">
+<button aria-controls="menu-gemeinde" aria-expanded="false" aria-haspopup="true" class="nav-group-toggle" type="button">Община</button>
+<ul class="nav-dropdown" hidden="" id="menu-gemeinde">
+<li><a href="../gemeinde-kultusvorstand-ru.html">Правление и комиссии</a></li>
+<li><a href="../gemeinde/präsident-und-präsidium-ru.html">Президиум</a></li>
+<li><a href="../gemeinde/generalsekretariat-ru.html">Генеральный секретариат</a></li>
+<li><a href="../gemeinde-insider-ru.html">Инсайдер общины</a></li>
+<li><a href="../die-ikg-wien-ru.html">История IKG Wien</a></li>
+<li><a href="../offene-stellen-ru.html">Вакансии</a></li>
+</ul>
+</div>
+<div class="nav-group">
+<button aria-controls="menu-service" aria-expanded="false" aria-haspopup="true" class="nav-group-toggle" type="button">Услуги</button>
+<ul class="nav-dropdown" hidden="" id="menu-service">
+<li><a href="../service-mitgliederservice-ru.html">Служба для членов общины</a></li>
+<li><a href="../informationen-fuer-neue-buergerinnen-und-buerger-ru.html">Информация для новых граждан</a></li>
+<li><a href="https://www.antisemitismus-meldestelle.at/" rel="noopener noreferrer" target="_blank" title="Открывается в новой вкладке">Служба сообщений об антисемитизме</a></li>
+<li><a href="../tmicha-ru.html">Tmicha: социальная помощь и благотворительность</a></li>
+<li><a href="../nachbarschaftshilfe-ru.html">Соседская помощь</a></li>
+<li><a href="../kompetenzstelle-fuer-inklusion-und-foerderpaedagogik-ru.html">Центр инклюзии и коррекционной педагогики</a></li>
+<li><a href="../service/restitution-ru.html">Реституция</a></li>
+<li><a href="../service-archiv-ru.html">Архив</a></li>
+<li><a href="../service/organisationen-und-institutionen-der-ikg-ru.html">Учреждения</a></li>
+<li><a href="https://www.zpc.at/" rel="noopener noreferrer" target="_blank" title="Открывается в новой вкладке">Школа Цви Перец Хаес</a></li>
+<li><a href="https://www.maimonides.at/" rel="noopener noreferrer" target="_blank" title="Открывается в новой вкладке">Sanatorium Maimonides</a></li>
+<li><a href="https://www.esra.at/" rel="noopener noreferrer" target="_blank" title="Открывается в новой вкладке">ESRA | Психосоциальный центр</a></li>
+<li><a href="https://jbbz.at/" rel="noopener noreferrer" target="_blank" title="Открывается в новой вкладке">Еврейский центр профессионального обучения</a></li>
+</ul>
+</div>
+<div class="nav-group">
+<button aria-controls="menu-aktuelles" aria-expanded="false" aria-haspopup="true" class="nav-group-toggle" type="button">Новости</button>
+<ul class="nav-dropdown" hidden="" id="menu-aktuelles">
+<li><a href="../aktuelle-ru.html">Новости</a></li>
+<li><a href="../events-ru.html">Мероприятия</a></li>
+</ul>
+</div>
+<div class="nav-group">
+<button aria-controls="menu-erleben" aria-expanded="false" aria-haspopup="true" class="nav-group-toggle" type="button">Жизнь общины</button>
+<ul class="nav-dropdown" hidden="" id="menu-erleben">
+<li><a href="../kultur-ru.html">Культура</a></li>
+<li><a href="../jugend-ru.html">Молодёжь</a></li>
+<li><a href="../schulen-ru.html">Школы и образование</a></li>
+<li><a href="../nachrichten/koscher-essen-in-wien-ru.html">Кошерная Вена</a></li>
+<li><a href="../juedische-gemeinde-baden-ru.html">Еврейская община Бадена</a></li>
+<li><a href="../besuch-des-stadttempels-ru.html">Экскурсии</a></li>
+</ul>
+</div>
+<div class="nav-group">
+<button aria-controls="menu-religioeses" aria-expanded="false" aria-haspopup="true" class="nav-group-toggle" type="button">Религия</button>
+<ul class="nav-dropdown" hidden="" id="menu-religioeses">
+<li><a href="../rabbinat/synagogen-ru.html">Венская городская синагога и время молитв</a></li>
+<li><a href="../rabbinat-de-ru.html">Раввинат</a></li>
+<li><a href="../rabbinat-stationen-des-lebens-ru.html">Этапы жизни</a></li>
+<li><a href="../rabbinat/friedhöfe-ru.html">Кладбища и мемориалы</a></li>
+<li><a href="../rabbinat-info-hinterbliebene-ru.html">Информация для родственников умерших</a></li>
+<li><a href="../synagogen-ru.html">Синагоги</a></li>
+<li><a href="../mikwaot-ru.html">Миквы</a></li>
+<li><a href="../beit-din-ru.html">Бейт-Дин – раввинский суд</a></li>
+</ul>
+</div>
+<a href="../kontakt-ru.html">Контакты</a>
+<span class="nav-tools">
+<a class="nav-tool" href="../search-ru.html">Поиск</a>
+<a class="nav-tool" href="../newsletter-ru.html">Рассылка</a>
+</span>
+</nav>
+<div class="header-end"><div class="lang-switcher"><button aria-controls="lang-menu" aria-expanded="false" aria-haspopup="menu" aria-label="Язык, Русский" class="lang-switcher-toggle" id="lang-switcher-btn" type="button"><img alt="" class="lang-flag" height="16" src="../img/flags/ru.svg" width="22"/><span class="lang-code">RU</span><span aria-hidden="true" class="lang-chevron"></span></button><ul aria-labelledby="lang-switcher-btn" class="lang-menu" hidden="" id="lang-menu" role="menu"><li role="none"><a data-switch="1" href="ikg-rabbinat.html" hreflang="de" lang="de" role="menuitem"><img alt="" class="lang-flag" height="16" src="../img/flags/at.svg" width="22"/><span class="lang-name">Deutsch</span><span class="lang-code-opt">DE</span></a></li><li role="none"><a data-switch="1" href="../en/events/ikg-rabbinat.html" hreflang="en" lang="en" role="menuitem"><img alt="" class="lang-flag" height="16" src="../img/flags/gb.svg" width="22"/><span class="lang-name">English</span><span class="lang-code-opt">EN</span></a></li><li role="none"><a data-switch="1" href="ikg-rabbinat-he.html" hreflang="he" lang="he" role="menuitem"><img alt="" class="lang-flag" height="16" src="../img/flags/il.svg" width="22"/><span class="lang-name">עברית</span><span class="lang-code-opt">HE</span></a></li><li role="none"><a aria-current="page" class="is-current" data-switch="1" href="ikg-rabbinat-ru.html" hreflang="ru" lang="ru" role="menuitem"><img alt="" class="lang-flag" height="16" src="../img/flags/ru.svg" width="22"/><span class="lang-name">Русский</span><span class="lang-code-opt">RU</span></a></li></ul></div><a class="btn btn-primary header-spenden" href="../jetztspenden-ru.html">Пожертвовать</a><div class="header-tools"><div aria-label="Размер шрифта" class="text-size" role="group"><button aria-label="Уменьшить шрифт" class="text-size-btn" data-text-size="down" title="Уменьшить шрифт" type="button">A−</button><button aria-label="Увеличить шрифт" class="text-size-btn" data-text-size="up" title="Увеличить шрифт" type="button">A+</button></div><button aria-controls="mobile-nav" aria-expanded="false" aria-label="Открыть меню" class="menu-toggle" type="button">
+<span></span>
+</button></div></div>
+</div>
+<div class="wrap">
+<nav aria-label="Мобильное меню" class="nav-mobile" hidden="" id="mobile-nav">
+<div class="nav-accordion">
+<button aria-controls="mmenu-gemeinde" aria-expanded="false" class="nav-acc-toggle" type="button">Община</button>
+<ul class="nav-acc-panel" hidden="" id="mmenu-gemeinde">
+<li><a href="../gemeinde-kultusvorstand-ru.html">Правление и комиссии</a></li>
+<li><a href="../gemeinde/präsident-und-präsidium-ru.html">Президиум</a></li>
+<li><a href="../gemeinde/generalsekretariat-ru.html">Генеральный секретариат</a></li>
+<li><a href="../gemeinde-insider-ru.html">Инсайдер общины</a></li>
+<li><a href="../die-ikg-wien-ru.html">История IKG Wien</a></li>
+<li><a href="../offene-stellen-ru.html">Вакансии</a></li>
+</ul>
+</div>
+<div class="nav-accordion">
+<button aria-controls="mmenu-service" aria-expanded="false" class="nav-acc-toggle" type="button">Услуги</button>
+<ul class="nav-acc-panel" hidden="" id="mmenu-service">
+<li><a href="../service-mitgliederservice-ru.html">Служба для членов общины</a></li>
+<li><a href="../informationen-fuer-neue-buergerinnen-und-buerger-ru.html">Информация для новых граждан</a></li>
+<li><a href="https://www.antisemitismus-meldestelle.at/" rel="noopener noreferrer" target="_blank" title="Открывается в новой вкладке">Служба сообщений об антисемитизме</a></li>
+<li><a href="../tmicha-ru.html">Tmicha: социальная помощь и благотворительность</a></li>
+<li><a href="../nachbarschaftshilfe-ru.html">Соседская помощь</a></li>
+<li><a href="../kompetenzstelle-fuer-inklusion-und-foerderpaedagogik-ru.html">Центр инклюзии и коррекционной педагогики</a></li>
+<li><a href="../service/restitution-ru.html">Реституция</a></li>
+<li><a href="../service-archiv-ru.html">Архив</a></li>
+<li><a href="../service/organisationen-und-institutionen-der-ikg-ru.html">Учреждения</a></li>
+<li><a href="https://www.zpc.at/" rel="noopener noreferrer" target="_blank" title="Открывается в новой вкладке">Школа Цви Перец Хаес</a></li>
+<li><a href="https://www.maimonides.at/" rel="noopener noreferrer" target="_blank" title="Открывается в новой вкладке">Sanatorium Maimonides</a></li>
+<li><a href="https://www.esra.at/" rel="noopener noreferrer" target="_blank" title="Открывается в новой вкладке">ESRA | Психосоциальный центр</a></li>
+<li><a href="https://jbbz.at/" rel="noopener noreferrer" target="_blank" title="Открывается в новой вкладке">Еврейский центр профессионального обучения</a></li>
+</ul>
+</div>
+<div class="nav-accordion">
+<button aria-controls="mmenu-aktuelles" aria-expanded="false" class="nav-acc-toggle" type="button">Новости</button>
+<ul class="nav-acc-panel" hidden="" id="mmenu-aktuelles">
+<li><a href="../aktuelle-ru.html">Новости</a></li>
+<li><a href="../events-ru.html">Мероприятия</a></li>
+</ul>
+</div>
+<div class="nav-accordion">
+<button aria-controls="mmenu-erleben" aria-expanded="false" class="nav-acc-toggle" type="button">Жизнь общины</button>
+<ul class="nav-acc-panel" hidden="" id="mmenu-erleben">
+<li><a href="../kultur-ru.html">Культура</a></li>
+<li><a href="../jugend-ru.html">Молодёжь</a></li>
+<li><a href="../schulen-ru.html">Школы и образование</a></li>
+<li><a href="../nachrichten/koscher-essen-in-wien-ru.html">Кошерная Вена</a></li>
+<li><a href="../juedische-gemeinde-baden-ru.html">Еврейская община Бадена</a></li>
+<li><a href="../besuch-des-stadttempels-ru.html">Экскурсии</a></li>
+</ul>
+</div>
+<div class="nav-accordion">
+<button aria-controls="mmenu-religioeses" aria-expanded="false" class="nav-acc-toggle" type="button">Религия</button>
+<ul class="nav-acc-panel" hidden="" id="mmenu-religioeses">
+<li><a href="../rabbinat/synagogen-ru.html">Венская городская синагога и время молитв</a></li>
+<li><a href="../rabbinat-de-ru.html">Раввинат</a></li>
+<li><a href="../rabbinat-stationen-des-lebens-ru.html">Этапы жизни</a></li>
+<li><a href="../rabbinat/friedhöfe-ru.html">Кладбища и мемориалы</a></li>
+<li><a href="../rabbinat-info-hinterbliebene-ru.html">Информация для родственников умерших</a></li>
+<li><a href="../synagogen-ru.html">Синагоги</a></li>
+<li><a href="../mikwaot-ru.html">Миквы</a></li>
+<li><a href="../beit-din-ru.html">Бейт-Дин – раввинский суд</a></li>
+</ul>
+</div>
+<a href="../kontakt-ru.html">Контакты</a>
+<a href="../search-ru.html">Поиск</a>
+<a href="../newsletter-ru.html">Рассылка</a>
+<nav aria-label="Язык" class="lang-flags"><a data-switch="1" href="ikg-rabbinat.html" hreflang="de" lang="de"><img alt="" class="lang-flag" height="16" src="../img/flags/at.svg" width="22"/><span class="lang-name">Deutsch</span></a><a data-switch="1" href="../en/events/ikg-rabbinat.html" hreflang="en" lang="en"><img alt="" class="lang-flag" height="16" src="../img/flags/gb.svg" width="22"/><span class="lang-name">English</span></a><a data-switch="1" href="ikg-rabbinat-he.html" hreflang="he" lang="he"><img alt="" class="lang-flag" height="16" src="../img/flags/il.svg" width="22"/><span class="lang-name">עברית</span></a><a aria-current="page" class="is-current" data-switch="1" href="ikg-rabbinat-ru.html" hreflang="ru" lang="ru"><img alt="" class="lang-flag" height="16" src="../img/flags/ru.svg" width="22"/><span class="lang-name">Русский</span></a></nav>
+<a class="btn btn-primary" href="../jetztspenden-ru.html">Пожертвовать</a>
+</nav>
+</div>
+</header>
+<main class="page-main" id="inhalt">
+<article class="wrap page-content">
+<nav aria-label="Панировочные сухари" class="page-breadcrumb"><a href="../ru.html">Главная</a> <span aria-hidden="true">/</span> <span aria-current="page">Мероприятия</span></nav>
+<div class="page-extracted"><div>
+<div id="posts"></div>
+<div class="container mb-8">
+<div class="grid grid-cols-1 mt-8 lg:grid-cols-12 md:grid-cols-3 md:gap-x-8 gap-y-8">
+<div class="col-span-3 space-y-8 lg:col-span-4 xl:col-span-3 sm:space-x-8 lg:space-x-0 lg:space-y-8 sm:space-y-0 lg:block sm:flex">
+<div class="rounded-sm bg-blue-light sm:w-1/2 lg:w-full">
+<h4 class="py-6 pl-8 text-xl font-bold text-black xl:pl-7 lg:pl-4">Категории</h4>
+<div class="flex flex-col">
+<a class="filter-category" href="../events-ru.html" test-post-category="all"> Все категории <figure class="official-fig"><img alt="Стрелка вправо" src="../img/official/filter-arrow-3cb6a7d2e21b42a84337017d8d3b83ef-4be40ae61794f25e.svg"/><figcaption>Изображение: IKG Wien</figcaption></figure>
+</a>
+<a class="filter-category" href="events-jugend-ru.html" test-post-category="events-jugend"> молодость <figure class="official-fig"><img alt="Стрелка вправо" src="../img/official/filter-arrow-3cb6a7d2e21b42a84337017d8d3b83ef-4be40ae61794f25e.svg"/><figcaption>Изображение: IKG Wien</figcaption></figure>
+</a> <a class="filter-category" href="events-kultur-ru.html" test-post-category="events-kultur"> культура <figure class="official-fig"><img alt="Стрелка вправо" src="../img/official/filter-arrow-3cb6a7d2e21b42a84337017d8d3b83ef-4be40ae61794f25e.svg"/><figcaption>Изображение: IKG Wien</figcaption></figure>
+</a> <a class="filter-category" href="upcoming-ru.html" test-post-category="upcoming"> Предстоящие <figure class="official-fig"><img alt="Стрелка вправо" src="../img/official/filter-arrow-3cb6a7d2e21b42a84337017d8d3b83ef-4be40ae61794f25e.svg"/><figcaption>Изображение: IKG Wien</figcaption></figure>
+</a> <a class="filter-category active" href="ikg-rabbinat-ru.html" test-post-category="ikg-rabbinat"> Раввинат <figure class="official-fig"><img alt="Стрелка вправо" src="../img/official/filter-arrow-3cb6a7d2e21b42a84337017d8d3b83ef-4be40ae61794f25e.svg"/><figcaption>Изображение: IKG Wien</figcaption></figure>
+</a> </div>
+</div>
+<div class="flex flex-col items-center justify-center p-8 rounded-sm bg-blue sm:w-1/2 lg:w-full">
+<h4 class="text-xl font-bold text-center text-white sm:mb-8 lg:mb-2">Заказать информационный бюллетень IKG</h4>
+<div class="widget-newsletter">
+<figure class="official-fig"><img alt="Изображение информационного бюллетеня" src="../img/official/ipad-small-c423ef3a061c517acd18929774366c00-e78ea103af0d18fd.jpg"/><figcaption>Изображение: IKG Wien</figcaption></figure>
+</div>
+<p class="relative z-10 w-4/5 text-sm text-center text-white bottom-12">Всегда в курсе событий IKG и еврейской жизни в Вене.</p> <a class="w-full -mt-8 text-center btn-red" href="../newsletter-ru.html">информационный бюллетень</a> </div>
+</div>
+<div class="md:col-span-3 xl:col-span-9 xl:col-start-4 lg:col-span-8 lg:col-start-5">
+<div>
+<div class="grid grid-cols-1 gap-8 pb-16 border-b xl:grid-cols-3 sm:grid-cols-2 border-light-indigo" id="latest-items">
+<div class="flex flex-col h-full" test-post="21400">
+<div>
+<figure class="official-fig"><img alt="J удалить визуальный элемент" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="../img/official/jdrop_visual-7ef6bc1d4c9fd8fd.jpg" width="260"/><figcaption>Изображение: IKG Wien</figcaption></figure>
+</div>
+<div class="flex flex-col h-full p-4 border-b border-l border-r rounded-b-sm border-light-indigo">
+<div class="flex items-center">
+<div class="px-1 py-1 mr-2 bg-red"></div>
+<div class="truncate"><a class="text-sm font-bold uppercase text-blue ml-1" href="ikg-rabbinat-ru.html" title="Rabbinat">Раввинат</a></div>
+</div>
+<a class="block mb-2 mt-3 hover:underline" href="../event/judaism-in-a-drop-new-beginnings-5787-rueckschau-und-vorschau.html">
+<h5 class="text-base sm:text-lg font-bold text-black">Иудаизм в капле: Новые начинания 5787 - Обзор и превью</h5>
+</a> <div class="mb-6">
+<time class="text-sm text-black whitespace-nowrap">17.10.2026, 19:00</time>
+</div>
+<a class="mt-auto btn-more" href="../event/judaism-in-a-drop-new-beginnings-5787-rueckschau-und-vorschau.html"> <span>Более</span> <svg fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M10.5879 3.92108C10.2633 3.59646 9.73701 3.59646 9.4124 3.92108C9.08799 4.24548 9.08776 4.77138 9.41187 5.09608L13.4752 9.16665H4.16683C3.70659 9.16665 3.3335 9.53974 3.3335 9.99998C3.3335 10.4602 3.70659 10.8333 4.16683 10.8333H13.4752L9.41187 14.9039C9.08776 15.2286 9.08799 15.7545 9.4124 16.0789C9.73701 16.4035 10.2633 16.4035 10.5879 16.0789L16.6668 9.99998L10.5879 3.92108Z" fill="currentColor" fill-rule="evenodd"></path>
+<mask height="14" id="blue-arrow-mask" mask-type="alpha" maskunits="userSpaceOnUse" width="14" x="3" y="3">
+<path clip-rule="evenodd" d="M10.5879 3.92108C10.2633 3.59646 9.73701 3.59646 9.4124 3.92108C9.08799 4.24548 9.08776 4.77138 9.41187 5.09608L13.4752 9.16665H4.16683C3.70659 9.16665 3.3335 9.53974 3.3335 9.99998C3.3335 10.4602 3.70659 10.8333 4.16683 10.8333H13.4752L9.41187 14.9039C9.08776 15.2286 9.08799 15.7545 9.4124 16.0789C9.73701 16.4035 10.2633 16.4035 10.5879 16.0789L16.6668 9.99998L10.5879 3.92108Z" fill="white" fill-rule="evenodd"></path>
+</mask>
+<g mask="url(#blue-arrow-mask)">
+<rect fill="#303992"></rect>
+</g>
+</svg>
+</a> </div>
+</div>
+<div class="flex flex-col h-full" test-post="20311">
+<div>
+<figure class="official-fig"><img alt="bbmc 22.03.2026 20" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="../img/official/bbmc-22-03-2026-20-110ce701d4456104.jpg" width="260"/><figcaption>Изображение: IKG Wien</figcaption></figure>
+</div>
+<div class="flex flex-col h-full p-4 border-b border-l border-r rounded-b-sm border-light-indigo">
+<div class="flex items-center">
+<div class="px-1 py-1 mr-2 bg-red"></div>
+<div class="truncate"><a class="text-sm font-bold uppercase text-blue ml-1" href="events-jugend-ru.html" title="Jugend">Молодежь</a>, <a class="text-sm font-bold uppercase text-blue ml-1" href="ikg-rabbinat-ru.html" title="Rabbinat">Раввинат</a></div>
+</div>
+<a class="block mb-2 mt-3 hover:underline" href="../event/neuer-bbmc-jahrgang-2026-27-ru.html">
+<h5 class="text-base sm:text-lg font-bold text-black">НОВЫЙ ВИНТАЖ BBMC 2026/27</h5>
+</a> <div class="mb-6">
+<time class="text-sm text-black whitespace-nowrap">11.10.2026, 10:30</time>
+</div>
+<a class="mt-auto btn-more" href="../event/neuer-bbmc-jahrgang-2026-27-ru.html"> <span>Более</span> <svg fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M10.5879 3.92108C10.2633 3.59646 9.73701 3.59646 9.4124 3.92108C9.08799 4.24548 9.08776 4.77138 9.41187 5.09608L13.4752 9.16665H4.16683C3.70659 9.16665 3.3335 9.53974 3.3335 9.99998C3.3335 10.4602 3.70659 10.8333 4.16683 10.8333H13.4752L9.41187 14.9039C9.08776 15.2286 9.08799 15.7545 9.4124 16.0789C9.73701 16.4035 10.2633 16.4035 10.5879 16.0789L16.6668 9.99998L10.5879 3.92108Z" fill="currentColor" fill-rule="evenodd"></path>
+<mask height="14" id="blue-arrow-mask" mask-type="alpha" maskunits="userSpaceOnUse" width="14" x="3" y="3">
+<path clip-rule="evenodd" d="M10.5879 3.92108C10.2633 3.59646 9.73701 3.59646 9.4124 3.92108C9.08799 4.24548 9.08776 4.77138 9.41187 5.09608L13.4752 9.16665H4.16683C3.70659 9.16665 3.3335 9.53974 3.3335 9.99998C3.3335 10.4602 3.70659 10.8333 4.16683 10.8333H13.4752L9.41187 14.9039C9.08776 15.2286 9.08799 15.7545 9.4124 16.0789C9.73701 16.4035 10.2633 16.4035 10.5879 16.0789L16.6668 9.99998L10.5879 3.92108Z" fill="white" fill-rule="evenodd"></path>
+</mask>
+<g mask="url(#blue-arrow-mask)">
+<rect fill="#303992"></rect>
+</g>
+</svg>
+</a> </div>
+</div>
+<div class="flex flex-col h-full" test-post="20443">
+<div>
+<figure class="official-fig"><img alt="Веб-сайт с изображением 2026 09 05" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="../img/official/2026_09_05_slichot_beitragsbild-website-f5685e209148ad41.jpg" width="260"/><figcaption>Изображение: IKG Wien</figcaption></figure>
+</div>
+<div class="flex flex-col h-full p-4 border-b border-l border-r rounded-b-sm border-light-indigo">
+<div class="flex items-center">
+<div class="px-1 py-1 mr-2 bg-red"></div>
+<div class="truncate"><a class="text-sm font-bold uppercase text-blue ml-1" href="ikg-events-ru.html" title="IKG Events">IKG События</a>, <a class="text-sm font-bold uppercase text-blue ml-1" href="ikg-rabbinat-ru.html" title="Rabbinat">Раввинат</a></div>
+</div>
+<a class="block mb-2 mt-3 hover:underline" href="../event/slichot-2026-ru.html">
+<h5 class="text-base sm:text-lg font-bold text-black">Сличот 2026</h5>
+</a> <div class="mb-6">
+<time class="text-sm text-black whitespace-nowrap">05.09.2026, 22:30</time>
+</div>
+<a class="mt-auto btn-more" href="../event/slichot-2026-ru.html"> <span>Более</span> <svg fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M10.5879 3.92108C10.2633 3.59646 9.73701 3.59646 9.4124 3.92108C9.08799 4.24548 9.08776 4.77138 9.41187 5.09608L13.4752 9.16665H4.16683C3.70659 9.16665 3.3335 9.53974 3.3335 9.99998C3.3335 10.4602 3.70659 10.8333 4.16683 10.8333H13.4752L9.41187 14.9039C9.08776 15.2286 9.08799 15.7545 9.4124 16.0789C9.73701 16.4035 10.2633 16.4035 10.5879 16.0789L16.6668 9.99998L10.5879 3.92108Z" fill="currentColor" fill-rule="evenodd"></path>
+<mask height="14" id="blue-arrow-mask" mask-type="alpha" maskunits="userSpaceOnUse" width="14" x="3" y="3">
+<path clip-rule="evenodd" d="M10.5879 3.92108C10.2633 3.59646 9.73701 3.59646 9.4124 3.92108C9.08799 4.24548 9.08776 4.77138 9.41187 5.09608L13.4752 9.16665H4.16683C3.70659 9.16665 3.3335 9.53974 3.3335 9.99998C3.3335 10.4602 3.70659 10.8333 4.16683 10.8333H13.4752L9.41187 14.9039C9.08776 15.2286 9.08799 15.7545 9.4124 16.0789C9.73701 16.4035 10.2633 16.4035 10.5879 16.0789L16.6668 9.99998L10.5879 3.92108Z" fill="white" fill-rule="evenodd"></path>
+</mask>
+<g mask="url(#blue-arrow-mask)">
+<rect fill="#303992"></rect>
+</g>
+</svg>
+</a> </div>
+</div>
+<div class="flex flex-col h-full" test-post="18137">
+<div>
+<figure class="official-fig"><img alt="Веб-сайт с избранными изображениями 2024 06 04 shiur hofmeister" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="../img/official/2024_06_04_shiur_hofmeister_beitragsbild-website-8a334d907fc5f62e.jpg" width="260"/><figcaption>Изображение: IKG Wien</figcaption></figure>
+</div>
+<div class="flex flex-col h-full p-4 border-b border-l border-r rounded-b-sm border-light-indigo">
+<div class="flex items-center">
+<div class="px-1 py-1 mr-2 bg-red"></div>
+<div class="truncate"><a class="text-sm font-bold uppercase text-blue ml-1" href="ikg-rabbinat-ru.html" title="Rabbinat">Раввинат</a></div>
+</div>
+<a class="block mb-2 mt-3 hover:underline" href="../event/judentum-verstehen-fragen-and-antworten.html">
+<h5 class="text-base sm:text-lg font-bold text-black">ПОНИМАНИЕ ИУДАИЗМА: Вопросы и ответы</h5>
+</a> <div class="mb-6">
+<time class="text-sm text-black whitespace-nowrap">15.07.2026, 17:00</time>
+</div>
+<a class="mt-auto btn-more" href="../event/judentum-verstehen-fragen-and-antworten.html"> <span>Более</span> <svg fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M10.5879 3.92108C10.2633 3.59646 9.73701 3.59646 9.4124 3.92108C9.08799 4.24548 9.08776 4.77138 9.41187 5.09608L13.4752 9.16665H4.16683C3.70659 9.16665 3.3335 9.53974 3.3335 9.99998C3.3335 10.4602 3.70659 10.8333 4.16683 10.8333H13.4752L9.41187 14.9039C9.08776 15.2286 9.08799 15.7545 9.4124 16.0789C9.73701 16.4035 10.2633 16.4035 10.5879 16.0789L16.6668 9.99998L10.5879 3.92108Z" fill="currentColor" fill-rule="evenodd"></path>
+<mask height="14" id="blue-arrow-mask" mask-type="alpha" maskunits="userSpaceOnUse" width="14" x="3" y="3">
+<path clip-rule="evenodd" d="M10.5879 3.92108C10.2633 3.59646 9.73701 3.59646 9.4124 3.92108C9.08799 4.24548 9.08776 4.77138 9.41187 5.09608L13.4752 9.16665H4.16683C3.70659 9.16665 3.3335 9.53974 3.3335 9.99998C3.3335 10.4602 3.70659 10.8333 4.16683 10.8333H13.4752L9.41187 14.9039C9.08776 15.2286 9.08799 15.7545 9.4124 16.0789C9.73701 16.4035 10.2633 16.4035 10.5879 16.0789L16.6668 9.99998L10.5879 3.92108Z" fill="white" fill-rule="evenodd"></path>
+</mask>
+<g mask="url(#blue-arrow-mask)">
+<rect fill="#303992"></rect>
+</g>
+</svg>
+</a> </div>
+</div>
+<div class="flex flex-col h-full" test-post="19618">
+<div>
+<figure class="official-fig"><img alt="J удалить визуальный элемент" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="../img/official/jdrop_visual-7ef6bc1d4c9fd8fd.jpg" width="260"/><figcaption>Изображение: IKG Wien</figcaption></figure>
+</div>
+<div class="flex flex-col h-full p-4 border-b border-l border-r rounded-b-sm border-light-indigo">
+<div class="flex items-center">
+<div class="px-1 py-1 mr-2 bg-red"></div>
+<div class="truncate"><a class="text-sm font-bold uppercase text-blue ml-1" href="ikg-rabbinat-ru.html" title="Rabbinat">Раввинат</a></div>
+</div>
+<a class="block mb-2 mt-3 hover:underline" href="../event/judaism-in-a-drop-sommerlicher-rueckblick-and-ausblick-von-schawuot-bis-zu-den-hohen-feiertagen.html">
+<h5 class="text-base sm:text-lg font-bold text-black">Иудаизм в капле: летний обзор и перспективы от Шавуот до высоких праздников</h5>
+</a> <div class="mb-6">
+<time class="text-sm text-black whitespace-nowrap">13.06.2026, 19:00</time>
+</div>
+<a class="mt-auto btn-more" href="../event/judaism-in-a-drop-sommerlicher-rueckblick-and-ausblick-von-schawuot-bis-zu-den-hohen-feiertagen.html"> <span>Более</span> <svg fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M10.5879 3.92108C10.2633 3.59646 9.73701 3.59646 9.4124 3.92108C9.08799 4.24548 9.08776 4.77138 9.41187 5.09608L13.4752 9.16665H4.16683C3.70659 9.16665 3.3335 9.53974 3.3335 9.99998C3.3335 10.4602 3.70659 10.8333 4.16683 10.8333H13.4752L9.41187 14.9039C9.08776 15.2286 9.08799 15.7545 9.4124 16.0789C9.73701 16.4035 10.2633 16.4035 10.5879 16.0789L16.6668 9.99998L10.5879 3.92108Z" fill="currentColor" fill-rule="evenodd"></path>
+<mask height="14" id="blue-arrow-mask" mask-type="alpha" maskunits="userSpaceOnUse" width="14" x="3" y="3">
+<path clip-rule="evenodd" d="M10.5879 3.92108C10.2633 3.59646 9.73701 3.59646 9.4124 3.92108C9.08799 4.24548 9.08776 4.77138 9.41187 5.09608L13.4752 9.16665H4.16683C3.70659 9.16665 3.3335 9.53974 3.3335 9.99998C3.3335 10.4602 3.70659 10.8333 4.16683 10.8333H13.4752L9.41187 14.9039C9.08776 15.2286 9.08799 15.7545 9.4124 16.0789C9.73701 16.4035 10.2633 16.4035 10.5879 16.0789L16.6668 9.99998L10.5879 3.92108Z" fill="white" fill-rule="evenodd"></path>
+</mask>
+<g mask="url(#blue-arrow-mask)">
+<rect fill="#303992"></rect>
+</g>
+</svg>
+</a> </div>
+</div>
+<div class="flex flex-col h-full" test-post="18826">
+<div>
+<figure class="official-fig"><img alt="2025 06 01 Веб-сайт с избранными изображениями Пятого Шавуота" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="../img/official/2025_06_01_schawuot-5-beitragsbild-website-5763bf2094c82052.jpg" width="260"/><figcaption>Изображение: IKG Wien</figcaption></figure>
+</div>
+<div class="flex flex-col h-full p-4 border-b border-l border-r rounded-b-sm border-light-indigo">
+<div class="flex items-center">
+<div class="px-1 py-1 mr-2 bg-red"></div>
+<div class="truncate"><a class="text-sm font-bold uppercase text-blue ml-1" href="ikg-rabbinat-ru.html" title="Rabbinat">Раввинат</a></div>
+</div>
+<a class="block mb-2 mt-3 hover:underline" href="../event/schawuot-im-stadttempel-2026.html">
+<h5 class="text-base sm:text-lg font-bold text-black">Шавуот в City Temple 2026</h5>
+</a> <div class="mb-6">
+<time class="text-sm text-black whitespace-nowrap">21.05.2026, 19:00</time>
+</div>
+<a class="mt-auto btn-more" href="../event/schawuot-im-stadttempel-2026.html"> <span>Более</span> <svg fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M10.5879 3.92108C10.2633 3.59646 9.73701 3.59646 9.4124 3.92108C9.08799 4.24548 9.08776 4.77138 9.41187 5.09608L13.4752 9.16665H4.16683C3.70659 9.16665 3.3335 9.53974 3.3335 9.99998C3.3335 10.4602 3.70659 10.8333 4.16683 10.8333H13.4752L9.41187 14.9039C9.08776 15.2286 9.08799 15.7545 9.4124 16.0789C9.73701 16.4035 10.2633 16.4035 10.5879 16.0789L16.6668 9.99998L10.5879 3.92108Z" fill="currentColor" fill-rule="evenodd"></path>
+<mask height="14" id="blue-arrow-mask" mask-type="alpha" maskunits="userSpaceOnUse" width="14" x="3" y="3">
+<path clip-rule="evenodd" d="M10.5879 3.92108C10.2633 3.59646 9.73701 3.59646 9.4124 3.92108C9.08799 4.24548 9.08776 4.77138 9.41187 5.09608L13.4752 9.16665H4.16683C3.70659 9.16665 3.3335 9.53974 3.3335 9.99998C3.3335 10.4602 3.70659 10.8333 4.16683 10.8333H13.4752L9.41187 14.9039C9.08776 15.2286 9.08799 15.7545 9.4124 16.0789C9.73701 16.4035 10.2633 16.4035 10.5879 16.0789L16.6668 9.99998L10.5879 3.92108Z" fill="white" fill-rule="evenodd"></path>
+</mask>
+<g mask="url(#blue-arrow-mask)">
+<rect fill="#303992"></rect>
+</g>
+</svg>
+</a> </div>
+</div>
+<div class="flex flex-col h-full" test-post="18136">
+<div>
+<figure class="official-fig"><img alt="Веб-сайт с избранными изображениями 2024 06 04 shiur hofmeister" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="../img/official/2024_06_04_shiur_hofmeister_beitragsbild-website-8a334d907fc5f62e.jpg" width="260"/><figcaption>Изображение: IKG Wien</figcaption></figure>
+</div>
+<div class="flex flex-col h-full p-4 border-b border-l border-r rounded-b-sm border-light-indigo">
+<div class="flex items-center">
+<div class="px-1 py-1 mr-2 bg-red"></div>
+<div class="truncate"><a class="text-sm font-bold uppercase text-blue ml-1" href="ikg-rabbinat-ru.html" title="Rabbinat">Раввинат</a></div>
+</div>
+<a class="block mb-2 mt-3 hover:underline" href="../event/judentum-verstehen-ein-berg-in-der-wueste.html">
+<h5 class="text-base sm:text-lg font-bold text-black">ПОНИМАНИЕ ИУДАИЗМА: Гора в пустыне</h5>
+</a> <div class="mb-6">
+<time class="text-sm text-black whitespace-nowrap">20.05.2026, 17:00</time>
+</div>
+<a class="mt-auto btn-more" href="../event/judentum-verstehen-ein-berg-in-der-wueste.html"> <span>Более</span> <svg fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M10.5879 3.92108C10.2633 3.59646 9.73701 3.59646 9.4124 3.92108C9.08799 4.24548 9.08776 4.77138 9.41187 5.09608L13.4752 9.16665H4.16683C3.70659 9.16665 3.3335 9.53974 3.3335 9.99998C3.3335 10.4602 3.70659 10.8333 4.16683 10.8333H13.4752L9.41187 14.9039C9.08776 15.2286 9.08799 15.7545 9.4124 16.0789C9.73701 16.4035 10.2633 16.4035 10.5879 16.0789L16.6668 9.99998L10.5879 3.92108Z" fill="currentColor" fill-rule="evenodd"></path>
+<mask height="14" id="blue-arrow-mask" mask-type="alpha" maskunits="userSpaceOnUse" width="14" x="3" y="3">
+<path clip-rule="evenodd" d="M10.5879 3.92108C10.2633 3.59646 9.73701 3.59646 9.4124 3.92108C9.08799 4.24548 9.08776 4.77138 9.41187 5.09608L13.4752 9.16665H4.16683C3.70659 9.16665 3.3335 9.53974 3.3335 9.99998C3.3335 10.4602 3.70659 10.8333 4.16683 10.8333H13.4752L9.41187 14.9039C9.08776 15.2286 9.08799 15.7545 9.4124 16.0789C9.73701 16.4035 10.2633 16.4035 10.5879 16.0789L16.6668 9.99998L10.5879 3.92108Z" fill="white" fill-rule="evenodd"></path>
+</mask>
+<g mask="url(#blue-arrow-mask)">
+<rect fill="#303992"></rect>
+</g>
+</svg>
+</a> </div>
+</div>
+<div class="flex flex-col h-full" test-post="19024">
+<div>
+<figure class="official-fig"><img alt="J удалить визуальный элемент" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="../img/official/jdrop_visual-7ef6bc1d4c9fd8fd.jpg" width="260"/><figcaption>Изображение: IKG Wien</figcaption></figure>
+</div>
+<div class="flex flex-col h-full p-4 border-b border-l border-r rounded-b-sm border-light-indigo">
+<div class="flex items-center">
+<div class="px-1 py-1 mr-2 bg-red"></div>
+<div class="truncate"><a class="text-sm font-bold uppercase text-blue ml-1" href="ikg-rabbinat-ru.html" title="Rabbinat">Раввинат</a></div>
+</div>
+<a class="block mb-2 mt-3 hover:underline" href="../event/judaism-in-a-drop-demokratie-and-menschlichkeit-milk-and-honey.html">
+<h5 class="text-base sm:text-lg font-bold text-black">Иудаизм в капле: Демократия и человечность: молоко и мед</h5>
+</a> <div class="mb-6">
+<time class="text-sm text-black whitespace-nowrap">16.05.2026, 19:00</time>
+</div>
+<a class="mt-auto btn-more" href="../event/judaism-in-a-drop-demokratie-and-menschlichkeit-milk-and-honey.html"> <span>Более</span> <svg fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M10.5879 3.92108C10.2633 3.59646 9.73701 3.59646 9.4124 3.92108C9.08799 4.24548 9.08776 4.77138 9.41187 5.09608L13.4752 9.16665H4.16683C3.70659 9.16665 3.3335 9.53974 3.3335 9.99998C3.3335 10.4602 3.70659 10.8333 4.16683 10.8333H13.4752L9.41187 14.9039C9.08776 15.2286 9.08799 15.7545 9.4124 16.0789C9.73701 16.4035 10.2633 16.4035 10.5879 16.0789L16.6668 9.99998L10.5879 3.92108Z" fill="currentColor" fill-rule="evenodd"></path>
+<mask height="14" id="blue-arrow-mask" mask-type="alpha" maskunits="userSpaceOnUse" width="14" x="3" y="3">
+<path clip-rule="evenodd" d="M10.5879 3.92108C10.2633 3.59646 9.73701 3.59646 9.4124 3.92108C9.08799 4.24548 9.08776 4.77138 9.41187 5.09608L13.4752 9.16665H4.16683C3.70659 9.16665 3.3335 9.53974 3.3335 9.99998C3.3335 10.4602 3.70659 10.8333 4.16683 10.8333H13.4752L9.41187 14.9039C9.08776 15.2286 9.08799 15.7545 9.4124 16.0789C9.73701 16.4035 10.2633 16.4035 10.5879 16.0789L16.6668 9.99998L10.5879 3.92108Z" fill="white" fill-rule="evenodd"></path>
+</mask>
+<g mask="url(#blue-arrow-mask)">
+<rect fill="#303992"></rect>
+</g>
+</svg>
+</a> </div>
+</div>
+<div class="flex flex-col h-full" test-post="18138">
+<div>
+<figure class="official-fig"><img alt="Adobe сток 489077262" class="w-full h-full rounded-t-sm overflow-hidden" height="190" src="../img/official/adobestock_489077262-f875727c7a9eaa5e.jpeg" width="260"/><figcaption>Изображение: IKG Wien</figcaption></figure>
+</div>
+<div class="flex flex-col h-full p-4 border-b border-l border-r rounded-b-sm border-light-indigo">
+<div class="flex items-center">
+<div class="px-1 py-1 mr-2 bg-red"></div>
+<div class="truncate"><a class="text-sm font-bold uppercase text-blue ml-1" href="ikg-rabbinat-ru.html" title="Rabbinat">Раввинат</a></div>
+</div>
+<a class="block mb-2 mt-3 hover:underline" href="../event/2-gemeindeseder-5786.html">
+<h5 class="text-base sm:text-lg font-bold text-black">2-й общинный седер 5786 г.</h5>
+</a> <div class="mb-6">
+<time class="text-sm text-black whitespace-nowrap">02.04.2026, 19:50</time>
+</div>
+<a class="mt-auto btn-more" href="../event/2-gemeindeseder-5786.html"> <span>Более</span> <svg fill="currentColor" height="20" viewbox="0 0 20 20" width="20" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M10.5879 3.92108C10.2633 3.59646 9.73701 3.59646 9.4124 3.92108C9.08799 4.24548 9.08776 4.77138 9.41187 5.09608L13.4752 9.16665H4.16683C3.70659 9.16665 3.3335 9.53974 3.3335 9.99998C3.3335 10.4602 3.70659 10.8333 4.16683 10.8333H13.4752L9.41187 14.9039C9.08776 15.2286 9.08799 15.7545 9.4124 16.0789C9.73701 16.4035 10.2633 16.4035 10.5879 16.0789L16.6668 9.99998L10.5879 3.92108Z" fill="currentColor" fill-rule="evenodd"></path>
+<mask height="14" id="blue-arrow-mask" mask-type="alpha" maskunits="userSpaceOnUse" width="14" x="3" y="3">
+<path clip-rule="evenodd" d="M10.5879 3.92108C10.2633 3.59646 9.73701 3.59646 9.4124 3.92108C9.08799 4.24548 9.08776 4.77138 9.41187 5.09608L13.4752 9.16665H4.16683C3.70659 9.16665 3.3335 9.53974 3.3335 9.99998C3.3335 10.4602 3.70659 10.8333 4.16683 10.8333H13.4752L9.41187 14.9039C9.08776 15.2286 9.08799 15.7545 9.4124 16.0789C9.73701 16.4035 10.2633 16.4035 10.5879 16.0789L16.6668 9.99998L10.5879 3.92108Z" fill="white" fill-rule="evenodd"></path>
+</mask>
+<g mask="url(#blue-arrow-mask)">
+<rect fill="#303992"></rect>
+</g>
+</svg>
+</a> </div>
+</div>
+</div>
+<div class="flex items-center justify-center mt-16 mb-24"><a class="text-center btn-more -white" data-disable-with="Wird geladen..." data-remote="true" href="ikg-rabbinat/page-2.html" id="latest-load-more">Более</a></div>
+</div>
+<div class="lg:mt-20 mt-10 mb-20">
+<calendar></calendar>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</article>
+</main>
+<footer class="site-footer">
+<div class="wrap">
+<div class="footer-top">
+<div>
+<h2>Примечание</h2>
+<p><strong>Концепт-демо PIXELPOP – не официальная страница IKG Wien.</strong> Эта страница — неофициальная дизайн-концепция для портфолио. Все тексты, цифры, даты и цитаты взяты с официального сайта www.ikg-wien.at (демо-перевод, не официальный текст IKG Wien). Пожертвования, членство, регистрацию и запросы оформляйте только там или через указанные официальные страницы.</p>
+</div>
+<div class="footer-newsletter">
+<h2>Рассылка</h2>
+<p>
+<a class="btn btn-on-primary" href="../newsletter-ru.html">Подписаться</a>
+</p>
+<p class="newsletter-consent">Я соглашаюсь с <a data-legal-de="1" href="../datenschutz.html" hreflang="de">Политика конфиденциальности (на немецком)</a><span class="legal-de-note" lang="ru"> Эта страница доступна только на немецком языке; юридически обязывающей является немецкая версия.</span><span class="legal-de-note" lang="ru"> Эта страница доступна только на немецком языке; юридически обязывающей является немецкая версия.</span>.</p>
+</div>
+</div>
+<div class="footer-sitemap">
+<div>
+<h2>Община</h2>
+<ul>
+<li><a href="../gemeinde-kultusvorstand-ru.html">Правление и комиссии</a></li>
+<li><a href="../gemeinde/präsident-und-präsidium-ru.html">Президиум</a></li>
+<li><a href="../gemeinde/generalsekretariat-ru.html">Генеральный секретариат</a></li>
+<li><a href="../gemeinde-insider-ru.html">Инсайдер общины</a></li>
+<li><a href="../die-ikg-wien-ru.html">История IKG Wien</a></li>
+<li><a href="../offene-stellen-ru.html">Вакансии</a></li>
+</ul>
+</div>
+<div>
+<h2>Услуги</h2>
+<ul>
+<li><a href="../service-mitgliederservice-ru.html">Служба для членов общины</a></li>
+<li><a href="../informationen-fuer-neue-buergerinnen-und-buerger-ru.html">Информация для новых граждан</a></li>
+<li><a href="https://www.antisemitismus-meldestelle.at/" rel="noopener noreferrer" target="_blank" title="Открывается в новой вкладке">Служба сообщений об антисемитизме</a></li>
+<li><a href="../tmicha-ru.html">Tmicha: социальная помощь и благотворительность</a></li>
+<li><a href="../nachbarschaftshilfe-ru.html">Соседская помощь</a></li>
+<li><a href="../kompetenzstelle-fuer-inklusion-und-foerderpaedagogik-ru.html">Центр инклюзии и коррекционной педагогики</a></li>
+<li><a href="../service/restitution-ru.html">Реституция</a></li>
+<li><a href="../service-archiv-ru.html">Архив</a></li>
+<li><a href="../service/organisationen-und-institutionen-der-ikg-ru.html">Учреждения</a></li>
+<li><a href="https://www.zpc.at/" rel="noopener noreferrer" target="_blank" title="Открывается в новой вкладке">Школа Цви Перец Хаес</a></li>
+<li><a href="https://www.maimonides.at/" rel="noopener noreferrer" target="_blank" title="Открывается в новой вкладке">Sanatorium Maimonides</a></li>
+<li><a href="https://www.esra.at/" rel="noopener noreferrer" target="_blank" title="Открывается в новой вкладке">ESRA | Психосоциальный центр</a></li>
+<li><a href="https://jbbz.at/" rel="noopener noreferrer" target="_blank" title="Открывается в новой вкладке">Еврейский центр профессионального обучения</a></li>
+</ul>
+</div>
+<div>
+<h2>Новости</h2>
+<ul>
+<li><a href="../aktuelle-ru.html">Новости</a></li>
+<li><a href="../events-ru.html">Мероприятия</a></li>
+</ul>
+</div>
+<div>
+<h2>Жизнь общины</h2>
+<ul>
+<li><a href="../kultur-ru.html">Культура</a></li>
+<li><a href="../jugend-ru.html">Молодёжь</a></li>
+<li><a href="../schulen-ru.html">Школы и образование</a></li>
+<li><a href="../nachrichten/koscher-essen-in-wien-ru.html">Кошерная Вена</a></li>
+<li><a href="../juedische-gemeinde-baden-ru.html">Еврейская община Бадена</a></li>
+<li><a href="../besuch-des-stadttempels-ru.html">Экскурсии</a></li>
+</ul>
+</div>
+<div>
+<h2>Религия</h2>
+<ul>
+<li><a href="../rabbinat/synagogen-ru.html">Венская городская синагога и время молитв</a></li>
+<li><a href="../rabbinat-de-ru.html">Раввинат</a></li>
+<li><a href="../rabbinat-stationen-des-lebens-ru.html">Этапы жизни</a></li>
+<li><a href="../rabbinat/friedhöfe-ru.html">Кладбища и мемориалы</a></li>
+<li><a href="../rabbinat-info-hinterbliebene-ru.html">Информация для родственников умерших</a></li>
+<li><a href="../synagogen-ru.html">Синагоги</a></li>
+<li><a href="../mikwaot-ru.html">Миквы</a></li>
+<li><a href="../beit-din-ru.html">Бейт-Дин – раввинский суд</a></li>
+</ul>
+</div>
+<div>
+<h2>Община и правовая информация</h2>
+<ul>
+<li><a href="../service-mitgliederservice-ru.html">Стать членом общины</a></li>
+<li><a href="../immobilienverwaltung-ru.html">Управление недвижимостью IKG</a></li>
+<li><a href="../rechtliches-ru.html">Правовая информация</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-legal">
+<a data-legal-de="1" href="../datenschutz.html" hreflang="de">Политика конфиденциальности (на немецком)</a>
+<a data-legal-de="1" href="../impressum.html" hreflang="de">Выходные данные (Impressum) (на немецком)</a>
+<a href="../press-room-ru.html">Пресс-центр</a>
+<a href="../kontakt-ru.html">Контакты</a>
+<a href="../jetztspenden-ru.html">Пожертвовать</a>
+<a href="../newsletter-ru.html">Рассылка</a>
+<a href="../search-ru.html">Поиск</a>
+<span class="footer-copy">©2026 – IKG WIEN</span>
+</div><p class="legal-de-note" lang="ru">Эта страница доступна только на немецком языке; юридически обязывающей является немецкая версия.</p><p class="legal-de-note" lang="ru">Эта страница доступна только на немецком языке; юридически обязывающей является немецкая версия.</p>
+<div class="footer-credits">
+<h2>Источники изображений</h2>
+<ul>
+<li>Интерьер 2018: Bic, CC BY-SA 4.0</li>
+<li>Интерьер 2006: Dnalor 01, CC BY-SA 3.0 AT</li>
+<li>Купол 2014: Hirut55, CC BY-SA 3.0 AT</li>
+<li>Зайтенштеттенгассе 2010: Yair Haklai, CC BY-SA 3.0</li>
+<li>Портал 2009: Gerd Eichmann, CC BY-SA 4.0</li>
+<li>Источники: Wikimedia Commons. Снимки интерьеров сделаны до реставрации 2025/26.</li>
+</ul>
+</div>
+<p class="footer-note">
+        Концепт-демо PIXELPOP – не официальная страница IKG Wien. Создано с использованием анимационных рецептов
+        <a href="https://github.com/nexu-io/motion-anything" rel="noopener noreferrer" target="_blank" title="Открывается в новой вкладке">motion-anything</a>
+        (ближайшие системы: Uber, Airbnb). Шрифты встроены локально (Noto Sans). Фоновое видео с официального сайта IKG Wien.
+      </p>
+</div>
+</footer>
+<script src="../js/scroll-reveal.js?ver=1.9.3"></script>
+<script src="../js/fade-in-up.js?ver=1.9.3"></script>
+<script src="../js/stagger-list.js?ver=1.9.3"></script>
+<script src="../js/site.js?ver=1.9.4"></script>
+</body>
+</html>
