@@ -317,71 +317,8 @@
 })();
 
 
-/* Text size control. Classes only (strict CSP). Optional local preference. */
-(function () {
-  'use strict';
-  var KEY = 'ikg-demo-text-size';
-  var levels = ['md', 'lg', 'xl'];
-
-  function current() {
-    var html = document.documentElement;
-    var i, level = 'md';
-    for (i = 0; i < levels.length; i++) {
-      if (html.classList.contains('text-size-' + levels[i])) level = levels[i];
-    }
-    return level;
-  }
-
-  function apply(level) {
-    if (levels.indexOf(level) === -1) level = 'md';
-    var html = document.documentElement;
-    var i;
-    for (i = 0; i < levels.length; i++) {
-      html.classList.remove('text-size-' + levels[i]);
-    }
-    if (level !== 'md') html.classList.add('text-size-' + level);
-    try { localStorage.setItem(KEY, level); } catch (e) {}
-    document.querySelectorAll('.text-size-btn').forEach(function (btn) {
-      var dir = btn.getAttribute('data-text-size');
-      btn.disabled = (dir === 'down' && level === 'md') || (dir === 'up' && level === 'xl');
-    });
-  }
-
-  var start = 'md';
-  try { start = localStorage.getItem(KEY) || 'md'; } catch (e) {}
-  apply(start);
-
-  document.addEventListener('click', function (e) {
-    var btn = e.target.closest && e.target.closest('.text-size-btn');
-    if (!btn) return;
-    var i = levels.indexOf(current());
-    if (i < 0) i = 0;
-    if (btn.getAttribute('data-text-size') === 'up' && i < levels.length - 1) i += 1;
-    if (btn.getAttribute('data-text-size') === 'down' && i > 0) i -= 1;
-    apply(levels[i]);
-  });
-
-  var lang = (document.documentElement.getAttribute('lang') || '').toLowerCase();
-  if (lang.indexOf('en') === 0 || lang.indexOf('he') === 0 || lang.indexOf('ru') === 0) {
-    var group = document.querySelector('.text-size');
-    var labels = {
-      en: { group: 'Text size', down: 'Decrease text size', up: 'Increase text size' },
-      he: { group: 'גודל כתב', down: 'הקטן את הכתב', up: 'הגדל את הכתב' },
-      ru: { group: 'Размер текста', down: 'Уменьшить текст', up: 'Увеличить текст' }
-    };
-    var L = labels[lang.slice(0, 2)] || labels.en;
-    if (group) group.setAttribute('aria-label', L.group);
-    document.querySelectorAll('.text-size-btn').forEach(function (btn) {
-      if (btn.getAttribute('data-text-size') === 'down') {
-        btn.setAttribute('aria-label', L.down);
-        btn.setAttribute('title', L.down);
-      } else {
-        btn.setAttribute('aria-label', L.up);
-        btn.setAttribute('title', L.up);
-      }
-    });
-  }
-})();
+/* Text size: now part of the accessibility menu (a11y/a11y.js), which also migrates the old
+   "ikg-demo-text-size" setting. */
 
 
 /* Language switcher: disclosure button + menu, Esc / arrows, CSP-safe. */

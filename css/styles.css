@@ -3023,3 +3023,18 @@ p.legal-de-note{margin:.5rem 0 0}
   .site-header .header-end, .site-header .header-tools { gap: 4px; }
   .site-header .lang-switcher-toggle { padding: 0 6px; }
 }
+
+/* Accessibility statement (barrierefreiheit*.html) */
+.a11y-statement { max-width: 800px; }
+.a11y-statement h1 { margin: 0 0 16px; overflow-wrap: anywhere; }
+.a11y-statement h2 { font-family: var(--font-display); font-size: clamp(20px, 2.2vw, 24px); line-height: 1.25; margin: 36px 0 10px; }
+.page-content.a11y-statement :is(h1, h2, p, li) { text-align: start; }
+.a11y-statement p, .a11y-statement li { line-height: 1.6; max-width: 70ch; }
+.a11y-statement p { margin: 0 0 12px; }
+.a11y-statement .a11y-statement-lede { font-size: 1.125rem; color: var(--color-muted); }
+.a11y-statement ul { padding-inline-start: 1.25em; margin: 8px 0 14px; }
+.a11y-statement li { margin: 4px 0; }
+.a11y-statement a { overflow-wrap: anywhere; }
+
+/* WCAG 1.4.1: links inside footer paragraphs must not rely on colour alone */
+.site-footer p a { text-decoration: underline; text-underline-offset: 2px; }
